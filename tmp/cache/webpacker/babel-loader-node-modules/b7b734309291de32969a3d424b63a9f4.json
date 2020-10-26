@@ -1,0 +1,1 @@
+{"ast":null,"code":"console.log(\"banana\");","map":{"version":3,"sources":["/Users/carlosgarciajr/Documents/programming/yo_soy_garcia/app/javascript/packs/sample.js"],"names":["console","log"],"mappings":"AAAAA,OAAO,CAACC,GAAR,CAAY,QAAZ","sourcesContent":["console.log(\"banana\")"]},"metadata":{},"sourceType":"module"}
