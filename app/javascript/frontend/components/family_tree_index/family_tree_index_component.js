@@ -19,7 +19,9 @@ class FamilyTreesIndex extends React.Component {
     }
 
     return (
-      <div>banana</div>
+      <div className="family-tree-index-container">
+        
+      </div>
     )
   }
 }
