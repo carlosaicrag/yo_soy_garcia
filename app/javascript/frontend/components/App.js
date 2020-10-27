@@ -8,8 +8,8 @@ function App() {
   return (
     <div className="app">
       <Switch>
-        <Route path="/familyTrees" component={FamilyTreeIndexContainer}></Route>
         <Route path="/familyTrees/:familyMemberId" component={FamilyTreeShowContainer}></Route>
+        <Route path="/familyTrees" component={FamilyTreeIndexContainer}></Route>
       </Switch>
       <Footer></Footer>
     </div>

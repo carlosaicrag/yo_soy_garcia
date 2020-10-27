@@ -16949,3 +16949,1232 @@ Processing by Api::FamilyMembersController#find_all_family_trees as JSON
 Completed 200 OK in 12ms (Views: 1.0ms | ActiveRecord: 3.5ms | Allocations: 5723)
 
 
+Started GET "/" for ::1 at 2020-10-26 17:48:43 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/carlosgarciajr/Documents/programming/yo_soy_garcia/public/packs
+[Webpacker] Hash: 2af2da291c749bc5640c
+Version: webpack 4.44.2
+Time: 1593ms
+Built at: 10/26/2020 5:48:46 PM
+                                       Asset       Size         Chunks                         Chunk Names
+      js/application-cd9baa997ab2a6e5febb.js   70.9 KiB    application  [emitted] [immutable]  application
+  js/application-cd9baa997ab2a6e5febb.js.map   80.2 KiB    application  [emitted] [dev]        application
+    js/yo_soy_garcia-c59dd8098d55e908d92d.js   1.91 MiB  yo_soy_garcia  [emitted] [immutable]  yo_soy_garcia
+js/yo_soy_garcia-c59dd8098d55e908d92d.js.map   2.13 MiB  yo_soy_garcia  [emitted] [dev]        yo_soy_garcia
+                               manifest.json  717 bytes                 [emitted]              
+Entrypoint application = js/application-cd9baa997ab2a6e5febb.js js/application-cd9baa997ab2a6e5febb.js.map
+Entrypoint yo_soy_garcia = js/yo_soy_garcia-c59dd8098d55e908d92d.js js/yo_soy_garcia-c59dd8098d55e908d92d.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/frontend/action-types/family_members_action_types.js] 109 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/actions/family_members_actions.js] 2.51 KiB {yo_soy_garcia} [built]
+[./app/javascript/frontend/reducers/entities_reducer.js] 161 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/reducers/family_member_reducer.js] 568 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/reducers/root_reducer.js] 141 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/selectors/family_tree_index_selector.js] 127 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/store/store.js] 393 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/utils/family_members_util.js] 259 bytes {yo_soy_garcia} [built]
+[./app/javascript/packs/application.js] 717 bytes {application} [built]
+[./app/javascript/packs/yo_soy_garcia.jsx] 891 bytes {yo_soy_garcia} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {yo_soy_garcia} [built]
+[./node_modules/webpack/buildin/harmony-module.js] (webpack)/buildin/harmony-module.js 631 bytes {yo_soy_garcia} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {yo_soy_garcia} [built]
+    + 122 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 2697ms (Views: 2696.4ms | ActiveRecord: 0.0ms | Allocations: 8874)
+
+
+Started GET "/api/family_members/find_all_family_trees" for ::1 at 2020-10-26 17:48:46 -0700
+Processing by Api::FamilyMembersController#find_all_family_trees as JSON
+  [1m[36mFamilyMember Load (2.0ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members"[0m
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  [1m[36mFamilyMemberChildParent Load (0.3ms)[0m  [1m[34mSELECT "family_member_child_parents".* FROM "family_member_child_parents" WHERE "family_member_child_parents"."parent_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9)[0m  [["parent_id", 109], ["parent_id", 110], ["parent_id", 111], ["parent_id", 112], ["parent_id", 113], ["parent_id", 114], ["parent_id", 115], ["parent_id", 116], ["parent_id", 117]]
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  [1m[36mFamilyMember Load (8.8ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" IN ($1, $2, $3, $4, $5)[0m  [["id", 111], ["id", 112], ["id", 113], ["id", 114], ["id", 117]]
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  Rendering api/family_members/show_all_family_trees.json.jbuilder
+  Rendered api/family_members/show_all_family_trees.json.jbuilder (Duration: 0.5ms | Allocations: 429)
+Completed 200 OK in 92ms (Views: 1.8ms | ActiveRecord: 56.8ms | Allocations: 20428)
+
+
+Started GET "/api/family_members/find_all_family_trees" for ::1 at 2020-10-26 17:48:46 -0700
+Processing by Api::FamilyMembersController#find_all_family_trees as JSON
+  [1m[36mFamilyMember Load (3.0ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members"[0m
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  [1m[36mFamilyMemberChildParent Load (1.9ms)[0m  [1m[34mSELECT "family_member_child_parents".* FROM "family_member_child_parents" WHERE "family_member_child_parents"."parent_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9)[0m  [["parent_id", 109], ["parent_id", 110], ["parent_id", 111], ["parent_id", 112], ["parent_id", 113], ["parent_id", 114], ["parent_id", 115], ["parent_id", 116], ["parent_id", 117]]
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  [1m[36mFamilyMember Load (2.2ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" IN ($1, $2, $3, $4, $5)[0m  [["id", 111], ["id", 112], ["id", 113], ["id", 114], ["id", 117]]
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  Rendering api/family_members/show_all_family_trees.json.jbuilder
+  Rendered api/family_members/show_all_family_trees.json.jbuilder (Duration: 0.4ms | Allocations: 427)
+Completed 200 OK in 16ms (Views: 1.3ms | ActiveRecord: 7.1ms | Allocations: 5037)
+
+
+Started GET "/" for ::1 at 2020-10-26 17:49:25 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/carlosgarciajr/Documents/programming/yo_soy_garcia/public/packs
+[Webpacker] Hash: 5d4094fa0e04f0fe51a8
+Version: webpack 4.44.2
+Time: 1677ms
+Built at: 10/26/2020 5:49:28 PM
+                                       Asset       Size         Chunks                         Chunk Names
+      js/application-cd9baa997ab2a6e5febb.js   70.9 KiB    application  [emitted] [immutable]  application
+  js/application-cd9baa997ab2a6e5febb.js.map   80.2 KiB    application  [emitted] [dev]        application
+    js/yo_soy_garcia-edda32a8267d27b5262d.js   1.91 MiB  yo_soy_garcia  [emitted] [immutable]  yo_soy_garcia
+js/yo_soy_garcia-edda32a8267d27b5262d.js.map   2.13 MiB  yo_soy_garcia  [emitted] [dev]        yo_soy_garcia
+                               manifest.json  717 bytes                 [emitted]              
+Entrypoint application = js/application-cd9baa997ab2a6e5febb.js js/application-cd9baa997ab2a6e5febb.js.map
+Entrypoint yo_soy_garcia = js/yo_soy_garcia-edda32a8267d27b5262d.js js/yo_soy_garcia-edda32a8267d27b5262d.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/frontend/action-types/family_members_action_types.js] 109 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/actions/family_members_actions.js] 2.51 KiB {yo_soy_garcia} [built]
+[./app/javascript/frontend/reducers/entities_reducer.js] 161 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/reducers/family_member_reducer.js] 568 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/reducers/root_reducer.js] 141 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/selectors/family_tree_index_selector.js] 127 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/store/store.js] 393 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/utils/family_members_util.js] 259 bytes {yo_soy_garcia} [built]
+[./app/javascript/packs/application.js] 717 bytes {application} [built]
+[./app/javascript/packs/yo_soy_garcia.jsx] 891 bytes {yo_soy_garcia} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {yo_soy_garcia} [built]
+[./node_modules/webpack/buildin/harmony-module.js] (webpack)/buildin/harmony-module.js 631 bytes {yo_soy_garcia} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {yo_soy_garcia} [built]
+    + 122 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 3025ms (Views: 3024.5ms | ActiveRecord: 0.0ms | Allocations: 8868)
+
+
+Started GET "/api/family_members/find_all_family_trees" for ::1 at 2020-10-26 17:49:28 -0700
+Processing by Api::FamilyMembersController#find_all_family_trees as JSON
+  [1m[36mFamilyMember Load (13.9ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members"[0m
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  [1m[36mFamilyMemberChildParent Load (0.3ms)[0m  [1m[34mSELECT "family_member_child_parents".* FROM "family_member_child_parents" WHERE "family_member_child_parents"."parent_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9)[0m  [["parent_id", 109], ["parent_id", 110], ["parent_id", 111], ["parent_id", 112], ["parent_id", 113], ["parent_id", 114], ["parent_id", 115], ["parent_id", 116], ["parent_id", 117]]
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  [1m[36mFamilyMember Load (0.4ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" IN ($1, $2, $3, $4, $5)[0m  [["id", 111], ["id", 112], ["id", 113], ["id", 114], ["id", 117]]
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  Rendering api/family_members/show_all_family_trees.json.jbuilder
+  Rendered api/family_members/show_all_family_trees.json.jbuilder (Duration: 0.7ms | Allocations: 429)
+Completed 200 OK in 89ms (Views: 2.9ms | ActiveRecord: 28.0ms | Allocations: 20390)
+
+
+Started GET "/" for ::1 at 2020-10-26 17:49:34 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 21.6ms | ActiveRecord: 0.0ms | Allocations: 7243)
+
+
+Started GET "/api/family_members/find_all_family_trees" for ::1 at 2020-10-26 17:49:34 -0700
+Processing by Api::FamilyMembersController#find_all_family_trees as JSON
+  [1m[36mFamilyMember Load (0.5ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members"[0m
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  [1m[36mFamilyMemberChildParent Load (0.3ms)[0m  [1m[34mSELECT "family_member_child_parents".* FROM "family_member_child_parents" WHERE "family_member_child_parents"."parent_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9)[0m  [["parent_id", 109], ["parent_id", 110], ["parent_id", 111], ["parent_id", 112], ["parent_id", 113], ["parent_id", 114], ["parent_id", 115], ["parent_id", 116], ["parent_id", 117]]
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  [1m[36mFamilyMember Load (0.3ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" IN ($1, $2, $3, $4, $5)[0m  [["id", 111], ["id", 112], ["id", 113], ["id", 114], ["id", 117]]
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  Rendering api/family_members/show_all_family_trees.json.jbuilder
+  Rendered api/family_members/show_all_family_trees.json.jbuilder (Duration: 0.3ms | Allocations: 427)
+Completed 200 OK in 7ms (Views: 0.7ms | ActiveRecord: 1.1ms | Allocations: 5037)
+
+
+Started GET "/" for ::1 at 2020-10-26 17:49:35 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 21.1ms | ActiveRecord: 0.0ms | Allocations: 7240)
+
+
+Started GET "/api/family_members/find_all_family_trees" for ::1 at 2020-10-26 17:49:35 -0700
+Processing by Api::FamilyMembersController#find_all_family_trees as JSON
+  [1m[36mFamilyMember Load (0.3ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members"[0m
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  [1m[36mFamilyMemberChildParent Load (0.4ms)[0m  [1m[34mSELECT "family_member_child_parents".* FROM "family_member_child_parents" WHERE "family_member_child_parents"."parent_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9)[0m  [["parent_id", 109], ["parent_id", 110], ["parent_id", 111], ["parent_id", 112], ["parent_id", 113], ["parent_id", 114], ["parent_id", 115], ["parent_id", 116], ["parent_id", 117]]
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  [1m[36mFamilyMember Load (0.3ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" IN ($1, $2, $3, $4, $5)[0m  [["id", 111], ["id", 112], ["id", 113], ["id", 114], ["id", 117]]
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  Rendering api/family_members/show_all_family_trees.json.jbuilder
+  Rendered api/family_members/show_all_family_trees.json.jbuilder (Duration: 0.3ms | Allocations: 427)
+Completed 200 OK in 7ms (Views: 0.8ms | ActiveRecord: 0.9ms | Allocations: 5037)
+
+
+Started GET "/" for ::1 at 2020-10-26 17:49:38 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 22.8ms | ActiveRecord: 0.0ms | Allocations: 7241)
+
+
+Started GET "/api/family_members/find_all_family_trees" for ::1 at 2020-10-26 17:49:38 -0700
+Processing by Api::FamilyMembersController#find_all_family_trees as JSON
+  [1m[36mFamilyMember Load (0.3ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members"[0m
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  [1m[36mFamilyMemberChildParent Load (0.3ms)[0m  [1m[34mSELECT "family_member_child_parents".* FROM "family_member_child_parents" WHERE "family_member_child_parents"."parent_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9)[0m  [["parent_id", 109], ["parent_id", 110], ["parent_id", 111], ["parent_id", 112], ["parent_id", 113], ["parent_id", 114], ["parent_id", 115], ["parent_id", 116], ["parent_id", 117]]
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  [1m[36mFamilyMember Load (1.9ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" IN ($1, $2, $3, $4, $5)[0m  [["id", 111], ["id", 112], ["id", 113], ["id", 114], ["id", 117]]
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  Rendering api/family_members/show_all_family_trees.json.jbuilder
+  Rendered api/family_members/show_all_family_trees.json.jbuilder (Duration: 0.4ms | Allocations: 427)
+Completed 200 OK in 11ms (Views: 1.6ms | ActiveRecord: 2.5ms | Allocations: 5723)
+
+
+Started GET "/" for ::1 at 2020-10-26 17:49:50 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/carlosgarciajr/Documents/programming/yo_soy_garcia/public/packs
+[Webpacker] Hash: 532d82a260eae6e7232a
+Version: webpack 4.44.2
+Time: 1596ms
+Built at: 10/26/2020 5:49:53 PM
+                                       Asset       Size         Chunks                         Chunk Names
+      js/application-cd9baa997ab2a6e5febb.js   70.9 KiB    application  [emitted] [immutable]  application
+  js/application-cd9baa997ab2a6e5febb.js.map   80.2 KiB    application  [emitted] [dev]        application
+    js/yo_soy_garcia-fd9105db109d33eeff2c.js   1.91 MiB  yo_soy_garcia  [emitted] [immutable]  yo_soy_garcia
+js/yo_soy_garcia-fd9105db109d33eeff2c.js.map   2.13 MiB  yo_soy_garcia  [emitted] [dev]        yo_soy_garcia
+                               manifest.json  717 bytes                 [emitted]              
+Entrypoint application = js/application-cd9baa997ab2a6e5febb.js js/application-cd9baa997ab2a6e5febb.js.map
+Entrypoint yo_soy_garcia = js/yo_soy_garcia-fd9105db109d33eeff2c.js js/yo_soy_garcia-fd9105db109d33eeff2c.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/frontend/action-types/family_members_action_types.js] 109 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/actions/family_members_actions.js] 2.51 KiB {yo_soy_garcia} [built]
+[./app/javascript/frontend/reducers/entities_reducer.js] 161 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/reducers/family_member_reducer.js] 568 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/reducers/root_reducer.js] 141 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/selectors/family_tree_index_selector.js] 127 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/store/store.js] 393 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/utils/family_members_util.js] 259 bytes {yo_soy_garcia} [built]
+[./app/javascript/packs/application.js] 717 bytes {application} [built]
+[./app/javascript/packs/yo_soy_garcia.jsx] 891 bytes {yo_soy_garcia} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {yo_soy_garcia} [built]
+[./node_modules/webpack/buildin/harmony-module.js] (webpack)/buildin/harmony-module.js 631 bytes {yo_soy_garcia} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {yo_soy_garcia} [built]
+    + 122 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 2703ms (Views: 2702.8ms | ActiveRecord: 0.0ms | Allocations: 8882)
+
+
+Started GET "/api/family_members/find_all_family_trees" for ::1 at 2020-10-26 17:49:53 -0700
+Processing by Api::FamilyMembersController#find_all_family_trees as JSON
+  [1m[36mFamilyMember Load (1.3ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members"[0m
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  [1m[36mFamilyMemberChildParent Load (0.8ms)[0m  [1m[34mSELECT "family_member_child_parents".* FROM "family_member_child_parents" WHERE "family_member_child_parents"."parent_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9)[0m  [["parent_id", 109], ["parent_id", 110], ["parent_id", 111], ["parent_id", 112], ["parent_id", 113], ["parent_id", 114], ["parent_id", 115], ["parent_id", 116], ["parent_id", 117]]
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  [1m[36mFamilyMember Load (0.3ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" IN ($1, $2, $3, $4, $5)[0m  [["id", 111], ["id", 112], ["id", 113], ["id", 114], ["id", 117]]
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  Rendering api/family_members/show_all_family_trees.json.jbuilder
+  Rendered api/family_members/show_all_family_trees.json.jbuilder (Duration: 0.4ms | Allocations: 429)
+Completed 200 OK in 56ms (Views: 1.5ms | ActiveRecord: 21.4ms | Allocations: 20435)
+
+
+Started GET "/" for ::1 at 2020-10-26 17:50:24 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 23.6ms | ActiveRecord: 0.0ms | Allocations: 7238)
+
+
+Started GET "/api/family_members/find_all_family_trees" for ::1 at 2020-10-26 17:50:24 -0700
+Processing by Api::FamilyMembersController#find_all_family_trees as JSON
+  [1m[36mFamilyMember Load (0.3ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members"[0m
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  [1m[36mFamilyMemberChildParent Load (0.3ms)[0m  [1m[34mSELECT "family_member_child_parents".* FROM "family_member_child_parents" WHERE "family_member_child_parents"."parent_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9)[0m  [["parent_id", 109], ["parent_id", 110], ["parent_id", 111], ["parent_id", 112], ["parent_id", 113], ["parent_id", 114], ["parent_id", 115], ["parent_id", 116], ["parent_id", 117]]
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  [1m[36mFamilyMember Load (1.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" IN ($1, $2, $3, $4, $5)[0m  [["id", 111], ["id", 112], ["id", 113], ["id", 114], ["id", 117]]
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  Rendering api/family_members/show_all_family_trees.json.jbuilder
+  Rendered api/family_members/show_all_family_trees.json.jbuilder (Duration: 0.3ms | Allocations: 427)
+Completed 200 OK in 10ms (Views: 1.2ms | ActiveRecord: 1.7ms | Allocations: 5437)
+
+
+Started GET "/" for ::1 at 2020-10-26 17:50:47 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/carlosgarciajr/Documents/programming/yo_soy_garcia/public/packs
+[Webpacker] Hash: fe57d6fc7406e9d068ce
+Version: webpack 4.44.2
+Time: 1607ms
+Built at: 10/26/2020 5:50:50 PM
+                                       Asset       Size         Chunks                         Chunk Names
+      js/application-cd9baa997ab2a6e5febb.js   70.9 KiB    application  [emitted] [immutable]  application
+  js/application-cd9baa997ab2a6e5febb.js.map   80.2 KiB    application  [emitted] [dev]        application
+    js/yo_soy_garcia-836f4c0c4b0942e125a0.js   1.91 MiB  yo_soy_garcia  [emitted] [immutable]  yo_soy_garcia
+js/yo_soy_garcia-836f4c0c4b0942e125a0.js.map   2.13 MiB  yo_soy_garcia  [emitted] [dev]        yo_soy_garcia
+                               manifest.json  717 bytes                 [emitted]              
+Entrypoint application = js/application-cd9baa997ab2a6e5febb.js js/application-cd9baa997ab2a6e5febb.js.map
+Entrypoint yo_soy_garcia = js/yo_soy_garcia-836f4c0c4b0942e125a0.js js/yo_soy_garcia-836f4c0c4b0942e125a0.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/frontend/action-types/family_members_action_types.js] 109 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/actions/family_members_actions.js] 2.51 KiB {yo_soy_garcia} [built]
+[./app/javascript/frontend/reducers/entities_reducer.js] 161 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/reducers/family_member_reducer.js] 568 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/reducers/root_reducer.js] 141 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/selectors/family_tree_index_selector.js] 127 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/store/store.js] 393 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/utils/family_members_util.js] 259 bytes {yo_soy_garcia} [built]
+[./app/javascript/packs/application.js] 717 bytes {application} [built]
+[./app/javascript/packs/yo_soy_garcia.jsx] 891 bytes {yo_soy_garcia} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {yo_soy_garcia} [built]
+[./node_modules/webpack/buildin/harmony-module.js] (webpack)/buildin/harmony-module.js 631 bytes {yo_soy_garcia} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {yo_soy_garcia} [built]
+    + 122 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 2727ms (Views: 2726.8ms | ActiveRecord: 0.0ms | Allocations: 8876)
+
+
+Started GET "/api/family_members/find_all_family_trees" for ::1 at 2020-10-26 17:50:50 -0700
+Processing by Api::FamilyMembersController#find_all_family_trees as JSON
+  [1m[36mFamilyMember Load (0.3ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members"[0m
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+Started GET "/api/family_members/100" for ::1 at 2020-10-26 17:50:50 -0700
+  [1m[36mFamilyMemberChildParent Load (1.7ms)[0m  [1m[34mSELECT "family_member_child_parents".* FROM "family_member_child_parents" WHERE "family_member_child_parents"."parent_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9)[0m  [["parent_id", 109], ["parent_id", 110], ["parent_id", 111], ["parent_id", 112], ["parent_id", 113], ["parent_id", 114], ["parent_id", 115], ["parent_id", 116], ["parent_id", 117]]
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  [1m[36mFamilyMember Load (0.9ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" IN ($1, $2, $3, $4, $5)[0m  [["id", 111], ["id", 112], ["id", 113], ["id", 114], ["id", 117]]
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+Processing by Api::FamilyMembersController#show as JSON
+  Parameters: {"id"=>"100"}
+  Rendering api/family_members/show_all_family_trees.json.jbuilder
+  Rendered api/family_members/show_all_family_trees.json.jbuilder (Duration: 0.4ms | Allocations: 429)
+Completed 200 OK in 57ms (Views: 2.9ms | ActiveRecord: 15.7ms | Allocations: 23941)
+
+
+  [1m[36mFamilyMember Load (5.9ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" ORDER BY "family_members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/family_members_controller.rb:9:in `show'
+  Rendering api/family_members/show.json.jbuilder
+  [1m[36mFamilyMember Load (8.2ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 109]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  [1m[36mFamilyMember Load (0.5ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 111]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  [1m[36mFamilyMember Load (0.4ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 114]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  [1m[36mFamilyMember Load (0.5ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 112]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  [1m[36mFamilyMember Load (0.5ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 113]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  [1m[36mFamilyMember Load (1.5ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 117]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  Rendered api/family_members/show.json.jbuilder (Duration: 49.8ms | Allocations: 9331)
+Completed 200 OK in 69ms (Views: 39.5ms | ActiveRecord: 18.0ms | Allocations: 11868)
+
+
+Started GET "/" for ::1 at 2020-10-26 17:51:17 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/carlosgarciajr/Documents/programming/yo_soy_garcia/public/packs
+[Webpacker] Hash: b8d8738f76b883b4e5e9
+Version: webpack 4.44.2
+Time: 1612ms
+Built at: 10/26/2020 5:51:20 PM
+                                       Asset       Size         Chunks                         Chunk Names
+      js/application-cd9baa997ab2a6e5febb.js   70.9 KiB    application  [emitted] [immutable]  application
+  js/application-cd9baa997ab2a6e5febb.js.map   80.2 KiB    application  [emitted] [dev]        application
+    js/yo_soy_garcia-0282a5f91752ea512fab.js   1.91 MiB  yo_soy_garcia  [emitted] [immutable]  yo_soy_garcia
+js/yo_soy_garcia-0282a5f91752ea512fab.js.map   2.13 MiB  yo_soy_garcia  [emitted] [dev]        yo_soy_garcia
+                               manifest.json  717 bytes                 [emitted]              
+Entrypoint application = js/application-cd9baa997ab2a6e5febb.js js/application-cd9baa997ab2a6e5febb.js.map
+Entrypoint yo_soy_garcia = js/yo_soy_garcia-0282a5f91752ea512fab.js js/yo_soy_garcia-0282a5f91752ea512fab.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/frontend/action-types/family_members_action_types.js] 109 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/actions/family_members_actions.js] 2.51 KiB {yo_soy_garcia} [built]
+[./app/javascript/frontend/reducers/entities_reducer.js] 161 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/reducers/family_member_reducer.js] 568 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/reducers/root_reducer.js] 141 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/selectors/family_tree_index_selector.js] 127 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/store/store.js] 393 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/utils/family_members_util.js] 259 bytes {yo_soy_garcia} [built]
+[./app/javascript/packs/application.js] 717 bytes {application} [built]
+[./app/javascript/packs/yo_soy_garcia.jsx] 891 bytes {yo_soy_garcia} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {yo_soy_garcia} [built]
+[./node_modules/webpack/buildin/harmony-module.js] (webpack)/buildin/harmony-module.js 631 bytes {yo_soy_garcia} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {yo_soy_garcia} [built]
+    + 122 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 2717ms (Views: 2716.6ms | ActiveRecord: 0.0ms | Allocations: 8920)
+
+
+Started GET "/api/family_members/find_all_family_trees" for ::1 at 2020-10-26 17:51:20 -0700
+Processing by Api::FamilyMembersController#find_all_family_trees as JSON
+  [1m[36mFamilyMember Load (0.4ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members"[0m
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  [1m[36mFamilyMemberChildParent Load (0.3ms)[0m  [1m[34mSELECT "family_member_child_parents".* FROM "family_member_child_parents" WHERE "family_member_child_parents"."parent_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9)[0m  [["parent_id", 109], ["parent_id", 110], ["parent_id", 111], ["parent_id", 112], ["parent_id", 113], ["parent_id", 114], ["parent_id", 115], ["parent_id", 116], ["parent_id", 117]]
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  [1m[36mFamilyMember Load (0.5ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" IN ($1, $2, $3, $4, $5)[0m  [["id", 111], ["id", 112], ["id", 113], ["id", 114], ["id", 117]]
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  Rendering api/family_members/show_all_family_trees.json.jbuilder
+  Rendered api/family_members/show_all_family_trees.json.jbuilder (Duration: 0.4ms | Allocations: 429)
+Completed 200 OK in 40ms (Views: 1.1ms | ActiveRecord: 12.6ms | Allocations: 18980)
+
+
+Started GET "/api/family_members/100" for ::1 at 2020-10-26 17:52:01 -0700
+Processing by Api::FamilyMembersController#show as JSON
+  Parameters: {"id"=>"100"}
+  [1m[36mFamilyMember Load (0.3ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" ORDER BY "family_members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/family_members_controller.rb:9:in `show'
+  Rendering api/family_members/show.json.jbuilder
+  [1m[36mFamilyMember Load (0.2ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 109]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 111]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  [1m[36mFamilyMember Load (0.2ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 114]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  [1m[36mFamilyMember Load (0.2ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 112]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  [1m[36mFamilyMember Load (0.2ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 113]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 117]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  Rendered api/family_members/show.json.jbuilder (Duration: 12.8ms | Allocations: 9771)
+Completed 200 OK in 28ms (Views: 11.3ms | ActiveRecord: 6.4ms | Allocations: 19220)
+
+
+Started GET "/" for ::1 at 2020-10-26 17:52:04 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/carlosgarciajr/Documents/programming/yo_soy_garcia/public/packs
+[Webpacker] Hash: 31d2f14feb0a334b5799
+Version: webpack 4.44.2
+Time: 1639ms
+Built at: 10/26/2020 5:52:07 PM
+                                       Asset       Size         Chunks                         Chunk Names
+      js/application-cd9baa997ab2a6e5febb.js   70.9 KiB    application  [emitted] [immutable]  application
+  js/application-cd9baa997ab2a6e5febb.js.map   80.2 KiB    application  [emitted] [dev]        application
+    js/yo_soy_garcia-cdbd5e744c83c1a988d6.js   1.91 MiB  yo_soy_garcia  [emitted] [immutable]  yo_soy_garcia
+js/yo_soy_garcia-cdbd5e744c83c1a988d6.js.map   2.13 MiB  yo_soy_garcia  [emitted] [dev]        yo_soy_garcia
+                               manifest.json  717 bytes                 [emitted]              
+Entrypoint application = js/application-cd9baa997ab2a6e5febb.js js/application-cd9baa997ab2a6e5febb.js.map
+Entrypoint yo_soy_garcia = js/yo_soy_garcia-cdbd5e744c83c1a988d6.js js/yo_soy_garcia-cdbd5e744c83c1a988d6.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/frontend/action-types/family_members_action_types.js] 109 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/actions/family_members_actions.js] 2.51 KiB {yo_soy_garcia} [built]
+[./app/javascript/frontend/reducers/entities_reducer.js] 161 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/reducers/family_member_reducer.js] 568 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/reducers/root_reducer.js] 141 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/selectors/family_tree_index_selector.js] 127 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/store/store.js] 393 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/utils/family_members_util.js] 259 bytes {yo_soy_garcia} [built]
+[./app/javascript/packs/application.js] 717 bytes {application} [built]
+[./app/javascript/packs/yo_soy_garcia.jsx] 891 bytes {yo_soy_garcia} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {yo_soy_garcia} [built]
+[./node_modules/webpack/buildin/harmony-module.js] (webpack)/buildin/harmony-module.js 631 bytes {yo_soy_garcia} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {yo_soy_garcia} [built]
+    + 122 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 2755ms (Views: 2754.8ms | ActiveRecord: 0.0ms | Allocations: 8917)
+
+
+Started GET "/api/family_members/find_all_family_trees" for ::1 at 2020-10-26 17:52:07 -0700
+Processing by Api::FamilyMembersController#find_all_family_trees as JSON
+  [1m[36mFamilyMember Load (0.4ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members"[0m
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  [1m[36mFamilyMemberChildParent Load (0.5ms)[0m  [1m[34mSELECT "family_member_child_parents".* FROM "family_member_child_parents" WHERE "family_member_child_parents"."parent_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9)[0m  [["parent_id", 109], ["parent_id", 110], ["parent_id", 111], ["parent_id", 112], ["parent_id", 113], ["parent_id", 114], ["parent_id", 115], ["parent_id", 116], ["parent_id", 117]]
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  [1m[36mFamilyMember Load (0.5ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" IN ($1, $2, $3, $4, $5)[0m  [["id", 111], ["id", 112], ["id", 113], ["id", 114], ["id", 117]]
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  Rendering api/family_members/show_all_family_trees.json.jbuilder
+  Rendered api/family_members/show_all_family_trees.json.jbuilder (Duration: 0.4ms | Allocations: 428)
+Completed 200 OK in 22ms (Views: 0.8ms | ActiveRecord: 3.3ms | Allocations: 8417)
+
+
+Started GET "/api/family_members/100" for ::1 at 2020-10-26 17:52:10 -0700
+Processing by Api::FamilyMembersController#show as JSON
+  Parameters: {"id"=>"100"}
+  [1m[36mFamilyMember Load (4.3ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" ORDER BY "family_members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/family_members_controller.rb:9:in `show'
+  Rendering api/family_members/show.json.jbuilder
+  [1m[36mFamilyMember Load (0.2ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 109]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  [1m[36mFamilyMember Load (3.0ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 111]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  [1m[36mFamilyMember Load (0.7ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 114]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  [1m[36mFamilyMember Load (1.4ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 112]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  [1m[36mFamilyMember Load (1.8ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 113]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  [1m[36mFamilyMember Load (0.4ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 117]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  Rendered api/family_members/show.json.jbuilder (Duration: 26.0ms | Allocations: 6808)
+Completed 200 OK in 33ms (Views: 19.1ms | ActiveRecord: 11.8ms | Allocations: 7879)
+
+
+Started GET "/" for ::1 at 2020-10-26 17:53:11 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/carlosgarciajr/Documents/programming/yo_soy_garcia/public/packs
+[Webpacker] Hash: 9b07d87f06ef0ba718b8
+Version: webpack 4.44.2
+Time: 1797ms
+Built at: 10/26/2020 5:53:14 PM
+                                       Asset       Size         Chunks                         Chunk Names
+      js/application-cd9baa997ab2a6e5febb.js   70.9 KiB    application  [emitted] [immutable]  application
+  js/application-cd9baa997ab2a6e5febb.js.map   80.2 KiB    application  [emitted] [dev]        application
+    js/yo_soy_garcia-d06765a579bc59c6001a.js   1.91 MiB  yo_soy_garcia  [emitted] [immutable]  yo_soy_garcia
+js/yo_soy_garcia-d06765a579bc59c6001a.js.map   2.13 MiB  yo_soy_garcia  [emitted] [dev]        yo_soy_garcia
+                               manifest.json  717 bytes                 [emitted]              
+Entrypoint application = js/application-cd9baa997ab2a6e5febb.js js/application-cd9baa997ab2a6e5febb.js.map
+Entrypoint yo_soy_garcia = js/yo_soy_garcia-d06765a579bc59c6001a.js js/yo_soy_garcia-d06765a579bc59c6001a.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/frontend/action-types/family_members_action_types.js] 109 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/actions/family_members_actions.js] 2.51 KiB {yo_soy_garcia} [built]
+[./app/javascript/frontend/reducers/entities_reducer.js] 161 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/reducers/family_member_reducer.js] 568 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/reducers/root_reducer.js] 141 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/selectors/family_tree_index_selector.js] 127 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/store/store.js] 393 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/utils/family_members_util.js] 259 bytes {yo_soy_garcia} [built]
+[./app/javascript/packs/application.js] 717 bytes {application} [built]
+[./app/javascript/packs/yo_soy_garcia.jsx] 891 bytes {yo_soy_garcia} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {yo_soy_garcia} [built]
+[./node_modules/webpack/buildin/harmony-module.js] (webpack)/buildin/harmony-module.js 631 bytes {yo_soy_garcia} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {yo_soy_garcia} [built]
+    + 122 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 2899ms (Views: 2899.1ms | ActiveRecord: 0.0ms | Allocations: 8870)
+
+
+Started GET "/api/family_members/find_all_family_trees" for ::1 at 2020-10-26 17:53:14 -0700
+Processing by Api::FamilyMembersController#find_all_family_trees as JSON
+  [1m[36mFamilyMember Load (0.4ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members"[0m
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+Started GET "/api/family_members/100" for ::1 at 2020-10-26 17:53:14 -0700
+Processing by Api::FamilyMembersController#show as JSON
+  Parameters: {"id"=>"100"}
+  [1m[36mFamilyMemberChildParent Load (1.2ms)[0m  [1m[34mSELECT "family_member_child_parents".* FROM "family_member_child_parents" WHERE "family_member_child_parents"."parent_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9)[0m  [["parent_id", 109], ["parent_id", 110], ["parent_id", 111], ["parent_id", 112], ["parent_id", 113], ["parent_id", 114], ["parent_id", 115], ["parent_id", 116], ["parent_id", 117]]
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  [1m[36mFamilyMember Load (24.7ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" ORDER BY "family_members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/family_members_controller.rb:9:in `show'
+  Rendering api/family_members/show.json.jbuilder
+  [1m[36mFamilyMember Load (2.6ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" IN ($1, $2, $3, $4, $5)[0m  [["id", 111], ["id", 112], ["id", 113], ["id", 114], ["id", 117]]
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  Rendering api/family_members/show_all_family_trees.json.jbuilder
+  [1m[36mFamilyMember Load (4.9ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 109]]
+  Rendered api/family_members/show_all_family_trees.json.jbuilder (Duration: 0.4ms | Allocations: 428)
+Completed 200 OK in 87ms (Views: 1.7ms | ActiveRecord: 52.6ms | Allocations: 24800)
+
+
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  [1m[36mFamilyMember Load (0.4ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 111]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  [1m[36mFamilyMember Load (0.4ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 114]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  [1m[36mFamilyMember Load (3.0ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 112]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  [1m[36mFamilyMember Load (1.0ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 113]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  [1m[36mFamilyMember Load (0.4ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 117]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  Rendered api/family_members/show.json.jbuilder (Duration: 44.8ms | Allocations: 13843)
+Completed 200 OK in 81ms (Views: 35.6ms | ActiveRecord: 40.7ms | Allocations: 16643)
+
+
+Started GET "/" for ::1 at 2020-10-26 17:53:16 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.0ms | Allocations: 7242)
+
+
+Started GET "/api/family_members/find_all_family_trees" for ::1 at 2020-10-26 17:53:16 -0700
+Processing by Api::FamilyMembersController#find_all_family_trees as JSON
+  [1m[36mFamilyMember Load (0.3ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members"[0m
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  [1m[36mFamilyMemberChildParent Load (0.4ms)[0m  [1m[34mSELECT "family_member_child_parents".* FROM "family_member_child_parents" WHERE "family_member_child_parents"."parent_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9)[0m  [["parent_id", 109], ["parent_id", 110], ["parent_id", 111], ["parent_id", 112], ["parent_id", 113], ["parent_id", 114], ["parent_id", 115], ["parent_id", 116], ["parent_id", 117]]
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  [1m[36mFamilyMember Load (0.3ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" IN ($1, $2, $3, $4, $5)[0m  [["id", 111], ["id", 112], ["id", 113], ["id", 114], ["id", 117]]
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  Rendering api/family_members/show_all_family_trees.json.jbuilder
+  Rendered api/family_members/show_all_family_trees.json.jbuilder (Duration: 0.3ms | Allocations: 427)
+Completed 200 OK in 7ms (Views: 0.7ms | ActiveRecord: 1.1ms | Allocations: 5037)
+
+
+Started GET "/api/family_members/100" for ::1 at 2020-10-26 17:53:16 -0700
+Processing by Api::FamilyMembersController#show as JSON
+  Parameters: {"id"=>"100"}
+  [1m[36mFamilyMember Load (0.2ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" ORDER BY "family_members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/family_members_controller.rb:9:in `show'
+  Rendering api/family_members/show.json.jbuilder
+  [1m[36mFamilyMember Load (0.2ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 109]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  [1m[36mFamilyMember Load (2.7ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 111]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  [1m[36mFamilyMember Load (0.3ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 114]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  [1m[36mFamilyMember Load (1.7ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 112]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  [1m[36mFamilyMember Load (0.7ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 113]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  [1m[36mFamilyMember Load (0.2ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 117]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  Rendered api/family_members/show.json.jbuilder (Duration: 21.9ms | Allocations: 7496)
+Completed 200 OK in 24ms (Views: 16.5ms | ActiveRecord: 6.1ms | Allocations: 8567)
+
+
+Started GET "/" for ::1 at 2020-10-26 17:53:28 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/carlosgarciajr/Documents/programming/yo_soy_garcia/public/packs
+[Webpacker] Hash: d3459749f687ca6377a0
+Version: webpack 4.44.2
+Time: 1658ms
+Built at: 10/26/2020 5:53:31 PM
+                                       Asset       Size         Chunks                         Chunk Names
+      js/application-cd9baa997ab2a6e5febb.js   70.9 KiB    application  [emitted] [immutable]  application
+  js/application-cd9baa997ab2a6e5febb.js.map   80.2 KiB    application  [emitted] [dev]        application
+    js/yo_soy_garcia-8b816ce78ca7927b7943.js   1.91 MiB  yo_soy_garcia  [emitted] [immutable]  yo_soy_garcia
+js/yo_soy_garcia-8b816ce78ca7927b7943.js.map   2.13 MiB  yo_soy_garcia  [emitted] [dev]        yo_soy_garcia
+                               manifest.json  717 bytes                 [emitted]              
+Entrypoint application = js/application-cd9baa997ab2a6e5febb.js js/application-cd9baa997ab2a6e5febb.js.map
+Entrypoint yo_soy_garcia = js/yo_soy_garcia-8b816ce78ca7927b7943.js js/yo_soy_garcia-8b816ce78ca7927b7943.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/frontend/action-types/family_members_action_types.js] 109 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/actions/family_members_actions.js] 2.51 KiB {yo_soy_garcia} [built]
+[./app/javascript/frontend/reducers/entities_reducer.js] 161 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/reducers/family_member_reducer.js] 568 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/reducers/root_reducer.js] 141 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/selectors/family_tree_index_selector.js] 127 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/store/store.js] 393 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/utils/family_members_util.js] 259 bytes {yo_soy_garcia} [built]
+[./app/javascript/packs/application.js] 717 bytes {application} [built]
+[./app/javascript/packs/yo_soy_garcia.jsx] 891 bytes {yo_soy_garcia} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {yo_soy_garcia} [built]
+[./node_modules/webpack/buildin/harmony-module.js] (webpack)/buildin/harmony-module.js 631 bytes {yo_soy_garcia} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {yo_soy_garcia} [built]
+    + 122 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 2752ms (Views: 2752.1ms | ActiveRecord: 0.0ms | Allocations: 8919)
+
+
+Started GET "/api/family_members/find_all_family_trees" for ::1 at 2020-10-26 17:53:31 -0700
+Processing by Api::FamilyMembersController#find_all_family_trees as JSON
+  [1m[36mFamilyMember Load (0.4ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members"[0m
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+Started GET "/api/family_members/100" for ::1 at 2020-10-26 17:53:31 -0700
+Processing by Api::FamilyMembersController#show as JSON
+  Parameters: {"id"=>"100"}
+  [1m[36mFamilyMemberChildParent Load (2.5ms)[0m  [1m[34mSELECT "family_member_child_parents".* FROM "family_member_child_parents" WHERE "family_member_child_parents"."parent_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9)[0m  [["parent_id", 109], ["parent_id", 110], ["parent_id", 111], ["parent_id", 112], ["parent_id", 113], ["parent_id", 114], ["parent_id", 115], ["parent_id", 116], ["parent_id", 117]]
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  [1m[36mFamilyMember Load (4.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" ORDER BY "family_members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/family_members_controller.rb:9:in `show'
+  Rendering api/family_members/show.json.jbuilder
+  [1m[36mFamilyMember Load (5.9ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 109]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  [1m[36mFamilyMember Load (0.2ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 111]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  [1m[36mFamilyMember Load (3.6ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" IN ($1, $2, $3, $4, $5)[0m  [["id", 111], ["id", 112], ["id", 113], ["id", 114], ["id", 117]]
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  Rendering api/family_members/show_all_family_trees.json.jbuilder
+  Rendered api/family_members/show_all_family_trees.json.jbuilder (Duration: 0.4ms | Allocations: 428)
+  [1m[36mFamilyMember Load (2.0ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 114]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+Completed 200 OK in 54ms (Views: 1.1ms | ActiveRecord: 20.7ms | Allocations: 25753)
+
+
+  [1m[36mFamilyMember Load (0.8ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 112]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  [1m[36mFamilyMember Load (0.3ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 113]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  [1m[36mFamilyMember Load (2.4ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 117]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  Rendered api/family_members/show.json.jbuilder (Duration: 27.8ms | Allocations: 14359)
+Completed 200 OK in 35ms (Views: 17.1ms | ActiveRecord: 15.8ms | Allocations: 16857)
+
+
+Started GET "/" for ::1 at 2020-10-26 17:54:10 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 23.3ms | ActiveRecord: 0.0ms | Allocations: 7242)
+
+
+Started GET "/api/family_members/find_all_family_trees" for ::1 at 2020-10-26 17:54:10 -0700
+Processing by Api::FamilyMembersController#find_all_family_trees as JSON
+  [1m[36mFamilyMember Load (0.2ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members"[0m
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  [1m[36mFamilyMemberChildParent Load (0.3ms)[0m  [1m[34mSELECT "family_member_child_parents".* FROM "family_member_child_parents" WHERE "family_member_child_parents"."parent_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9)[0m  [["parent_id", 109], ["parent_id", 110], ["parent_id", 111], ["parent_id", 112], ["parent_id", 113], ["parent_id", 114], ["parent_id", 115], ["parent_id", 116], ["parent_id", 117]]
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  [1m[36mFamilyMember Load (0.2ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" IN ($1, $2, $3, $4, $5)[0m  [["id", 111], ["id", 112], ["id", 113], ["id", 114], ["id", 117]]
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  Rendering api/family_members/show_all_family_trees.json.jbuilder
+  Rendered api/family_members/show_all_family_trees.json.jbuilder (Duration: 0.2ms | Allocations: 427)
+Completed 200 OK in 5ms (Views: 0.7ms | ActiveRecord: 0.7ms | Allocations: 5037)
+
+
+Started GET "/" for ::1 at 2020-10-26 17:54:20 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/carlosgarciajr/Documents/programming/yo_soy_garcia/public/packs
+[Webpacker] Hash: 46278aaea4b9cbe7b577
+Version: webpack 4.44.2
+Time: 1524ms
+Built at: 10/26/2020 5:54:23 PM
+                                       Asset       Size         Chunks                         Chunk Names
+      js/application-cd9baa997ab2a6e5febb.js   70.9 KiB    application  [emitted] [immutable]  application
+  js/application-cd9baa997ab2a6e5febb.js.map   80.2 KiB    application  [emitted] [dev]        application
+    js/yo_soy_garcia-4c57d0b24eb77073141e.js   1.91 MiB  yo_soy_garcia  [emitted] [immutable]  yo_soy_garcia
+js/yo_soy_garcia-4c57d0b24eb77073141e.js.map   2.13 MiB  yo_soy_garcia  [emitted] [dev]        yo_soy_garcia
+                               manifest.json  717 bytes                 [emitted]              
+Entrypoint application = js/application-cd9baa997ab2a6e5febb.js js/application-cd9baa997ab2a6e5febb.js.map
+Entrypoint yo_soy_garcia = js/yo_soy_garcia-4c57d0b24eb77073141e.js js/yo_soy_garcia-4c57d0b24eb77073141e.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/frontend/action-types/family_members_action_types.js] 109 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/actions/family_members_actions.js] 2.51 KiB {yo_soy_garcia} [built]
+[./app/javascript/frontend/reducers/entities_reducer.js] 161 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/reducers/family_member_reducer.js] 568 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/reducers/root_reducer.js] 141 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/selectors/family_tree_index_selector.js] 127 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/store/store.js] 393 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/utils/family_members_util.js] 259 bytes {yo_soy_garcia} [built]
+[./app/javascript/packs/application.js] 717 bytes {application} [built]
+[./app/javascript/packs/yo_soy_garcia.jsx] 891 bytes {yo_soy_garcia} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {yo_soy_garcia} [built]
+[./node_modules/webpack/buildin/harmony-module.js] (webpack)/buildin/harmony-module.js 631 bytes {yo_soy_garcia} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {yo_soy_garcia} [built]
+    + 122 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 2626ms (Views: 2625.5ms | ActiveRecord: 0.0ms | Allocations: 8874)
+
+
+Started GET "/api/family_members/find_all_family_trees" for ::1 at 2020-10-26 17:54:23 -0700
+Processing by Api::FamilyMembersController#find_all_family_trees as JSON
+  [1m[36mFamilyMember Load (0.3ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members"[0m
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  [1m[36mFamilyMemberChildParent Load (0.4ms)[0m  [1m[34mSELECT "family_member_child_parents".* FROM "family_member_child_parents" WHERE "family_member_child_parents"."parent_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9)[0m  [["parent_id", 109], ["parent_id", 110], ["parent_id", 111], ["parent_id", 112], ["parent_id", 113], ["parent_id", 114], ["parent_id", 115], ["parent_id", 116], ["parent_id", 117]]
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  [1m[36mFamilyMember Load (1.4ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" IN ($1, $2, $3, $4, $5)[0m  [["id", 111], ["id", 112], ["id", 113], ["id", 114], ["id", 117]]
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  Rendering api/family_members/show_all_family_trees.json.jbuilder
+  Rendered api/family_members/show_all_family_trees.json.jbuilder (Duration: 0.6ms | Allocations: 429)
+Completed 200 OK in 51ms (Views: 1.4ms | ActiveRecord: 15.1ms | Allocations: 20215)
+
+
+Started GET "/api/family_members/find_all_family_trees" for ::1 at 2020-10-26 17:54:23 -0700
+Processing by Api::FamilyMembersController#find_all_family_trees as JSON
+  [1m[36mFamilyMember Load (1.8ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members"[0m
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  [1m[36mFamilyMemberChildParent Load (1.5ms)[0m  [1m[34mSELECT "family_member_child_parents".* FROM "family_member_child_parents" WHERE "family_member_child_parents"."parent_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9)[0m  [["parent_id", 109], ["parent_id", 110], ["parent_id", 111], ["parent_id", 112], ["parent_id", 113], ["parent_id", 114], ["parent_id", 115], ["parent_id", 116], ["parent_id", 117]]
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  [1m[36mFamilyMember Load (0.3ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" IN ($1, $2, $3, $4, $5)[0m  [["id", 111], ["id", 112], ["id", 113], ["id", 114], ["id", 117]]
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  Rendering api/family_members/show_all_family_trees.json.jbuilder
+  Rendered api/family_members/show_all_family_trees.json.jbuilder (Duration: 0.3ms | Allocations: 427)
+Completed 200 OK in 11ms (Views: 0.7ms | ActiveRecord: 3.6ms | Allocations: 5046)
+
+
+Started GET "/api/family_members/100" for ::1 at 2020-10-26 17:54:32 -0700
+Processing by Api::FamilyMembersController#show as JSON
+  Parameters: {"id"=>"100"}
+  [1m[36mFamilyMember Load (0.3ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" ORDER BY "family_members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/family_members_controller.rb:9:in `show'
+  Rendering api/family_members/show.json.jbuilder
+  [1m[36mFamilyMember Load (0.3ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 109]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  [1m[36mFamilyMember Load (0.2ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 111]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  [1m[36mFamilyMember Load (0.2ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 114]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  [1m[36mFamilyMember Load (0.2ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 112]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  [1m[36mFamilyMember Load (0.2ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 113]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  [1m[36mFamilyMember Load (0.2ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 117]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  Rendered api/family_members/show.json.jbuilder (Duration: 14.8ms | Allocations: 7172)
+Completed 200 OK in 17ms (Views: 14.1ms | ActiveRecord: 1.5ms | Allocations: 8277)
+
+
+Started GET "/" for ::1 at 2020-10-26 17:55:00 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/carlosgarciajr/Documents/programming/yo_soy_garcia/public/packs
+[Webpacker] Hash: 7f5551c99b5133061b63
+Version: webpack 4.44.2
+Time: 1753ms
+Built at: 10/26/2020 5:55:02 PM
+                                       Asset       Size         Chunks                         Chunk Names
+      js/application-cd9baa997ab2a6e5febb.js   70.9 KiB    application  [emitted] [immutable]  application
+  js/application-cd9baa997ab2a6e5febb.js.map   80.2 KiB    application  [emitted] [dev]        application
+    js/yo_soy_garcia-d5cf283d071a95a70c08.js   1.91 MiB  yo_soy_garcia  [emitted] [immutable]  yo_soy_garcia
+js/yo_soy_garcia-d5cf283d071a95a70c08.js.map   2.13 MiB  yo_soy_garcia  [emitted] [dev]        yo_soy_garcia
+                               manifest.json  717 bytes                 [emitted]              
+Entrypoint application = js/application-cd9baa997ab2a6e5febb.js js/application-cd9baa997ab2a6e5febb.js.map
+Entrypoint yo_soy_garcia = js/yo_soy_garcia-d5cf283d071a95a70c08.js js/yo_soy_garcia-d5cf283d071a95a70c08.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/frontend/action-types/family_members_action_types.js] 109 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/actions/family_members_actions.js] 2.51 KiB {yo_soy_garcia} [built]
+[./app/javascript/frontend/reducers/entities_reducer.js] 161 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/reducers/family_member_reducer.js] 568 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/reducers/root_reducer.js] 141 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/selectors/family_tree_index_selector.js] 127 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/store/store.js] 393 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/utils/family_members_util.js] 259 bytes {yo_soy_garcia} [built]
+[./app/javascript/packs/application.js] 717 bytes {application} [built]
+[./app/javascript/packs/yo_soy_garcia.jsx] 891 bytes {yo_soy_garcia} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {yo_soy_garcia} [built]
+[./node_modules/webpack/buildin/harmony-module.js] (webpack)/buildin/harmony-module.js 631 bytes {yo_soy_garcia} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {yo_soy_garcia} [built]
+    + 122 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 2863ms (Views: 2863.1ms | ActiveRecord: 0.0ms | Allocations: 8873)
+
+
+Started GET "/api/family_members/find_all_family_trees" for ::1 at 2020-10-26 17:55:03 -0700
+Processing by Api::FamilyMembersController#find_all_family_trees as JSON
+  [1m[36mFamilyMember Load (0.5ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members"[0m
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+Started GET "/api/family_members/100" for ::1 at 2020-10-26 17:55:03 -0700
+Processing by Api::FamilyMembersController#show as JSON
+  Parameters: {"id"=>"100"}
+  [1m[36mFamilyMember Load (0.8ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" ORDER BY "family_members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/family_members_controller.rb:9:in `show'
+  Rendering api/family_members/show.json.jbuilder
+  [1m[36mFamilyMemberChildParent Load (3.5ms)[0m  [1m[34mSELECT "family_member_child_parents".* FROM "family_member_child_parents" WHERE "family_member_child_parents"."parent_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9)[0m  [["parent_id", 109], ["parent_id", 110], ["parent_id", 111], ["parent_id", 112], ["parent_id", 113], ["parent_id", 114], ["parent_id", 115], ["parent_id", 116], ["parent_id", 117]]
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  [1m[36mFamilyMember Load (2.2ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 109]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  [1m[36mFamilyMember Load (13.6ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 111]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  [1m[36mFamilyMember Load (1.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" IN ($1, $2, $3, $4, $5)[0m  [["id", 111], ["id", 112], ["id", 113], ["id", 114], ["id", 117]]
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  [1m[36mFamilyMember Load (1.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 114]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  Rendering api/family_members/show_all_family_trees.json.jbuilder
+  Rendered api/family_members/show_all_family_trees.json.jbuilder (Duration: 0.4ms | Allocations: 428)
+  [1m[36mFamilyMember Load (0.6ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 112]]
+Completed 200 OK in 64ms (Views: 3.7ms | ActiveRecord: 28.0ms | Allocations: 25921)
+
+
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  [1m[36mFamilyMember Load (1.5ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 113]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  [1m[36mFamilyMember Load (0.2ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 117]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  Rendered api/family_members/show.json.jbuilder (Duration: 37.2ms | Allocations: 14943)
+Completed 200 OK in 43ms (Views: 19.3ms | ActiveRecord: 20.0ms | Allocations: 16679)
+
+
+Started GET "/api/family_members/find_all_family_trees" for ::1 at 2020-10-26 17:55:05 -0700
+Processing by Api::FamilyMembersController#find_all_family_trees as JSON
+  [1m[36mFamilyMember Load (0.5ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members"[0m
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  [1m[36mFamilyMemberChildParent Load (0.4ms)[0m  [1m[34mSELECT "family_member_child_parents".* FROM "family_member_child_parents" WHERE "family_member_child_parents"."parent_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9)[0m  [["parent_id", 109], ["parent_id", 110], ["parent_id", 111], ["parent_id", 112], ["parent_id", 113], ["parent_id", 114], ["parent_id", 115], ["parent_id", 116], ["parent_id", 117]]
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  [1m[36mFamilyMember Load (0.5ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" IN ($1, $2, $3, $4, $5)[0m  [["id", 111], ["id", 112], ["id", 113], ["id", 114], ["id", 117]]
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  Rendering api/family_members/show_all_family_trees.json.jbuilder
+  Rendered api/family_members/show_all_family_trees.json.jbuilder (Duration: 0.6ms | Allocations: 427)
+Completed 200 OK in 14ms (Views: 1.5ms | ActiveRecord: 1.4ms | Allocations: 5037)
+
+
+Started GET "/api/family_members/100" for ::1 at 2020-10-26 17:55:07 -0700
+Processing by Api::FamilyMembersController#show as JSON
+  Parameters: {"id"=>"100"}
+  [1m[36mFamilyMember Load (0.4ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" ORDER BY "family_members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/family_members_controller.rb:9:in `show'
+  Rendering api/family_members/show.json.jbuilder
+  [1m[36mFamilyMember Load (0.2ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 109]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  [1m[36mFamilyMember Load (0.3ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 111]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  [1m[36mFamilyMember Load (0.7ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 114]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  [1m[36mFamilyMember Load (0.2ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 112]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  [1m[36mFamilyMember Load (0.3ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 113]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  [1m[36mFamilyMember Load (0.2ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 117]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  Rendered api/family_members/show.json.jbuilder (Duration: 15.5ms | Allocations: 6808)
+Completed 200 OK in 19ms (Views: 14.1ms | ActiveRecord: 2.2ms | Allocations: 7878)
+
+
+Started GET "/" for ::1 at 2020-10-26 17:55:14 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 28.6ms | ActiveRecord: 0.0ms | Allocations: 7241)
+
+
+Started GET "/api/family_members/find_all_family_trees" for ::1 at 2020-10-26 17:55:14 -0700
+Processing by Api::FamilyMembersController#find_all_family_trees as JSON
+  [1m[36mFamilyMember Load (0.4ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members"[0m
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  [1m[36mFamilyMemberChildParent Load (0.3ms)[0m  [1m[34mSELECT "family_member_child_parents".* FROM "family_member_child_parents" WHERE "family_member_child_parents"."parent_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9)[0m  [["parent_id", 109], ["parent_id", 110], ["parent_id", 111], ["parent_id", 112], ["parent_id", 113], ["parent_id", 114], ["parent_id", 115], ["parent_id", 116], ["parent_id", 117]]
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  [1m[36mFamilyMember Load (0.9ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" IN ($1, $2, $3, $4, $5)[0m  [["id", 111], ["id", 112], ["id", 113], ["id", 114], ["id", 117]]
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  Rendering api/family_members/show_all_family_trees.json.jbuilder
+  Rendered api/family_members/show_all_family_trees.json.jbuilder (Duration: 0.6ms | Allocations: 427)
+Completed 200 OK in 13ms (Views: 1.2ms | ActiveRecord: 1.7ms | Allocations: 5081)
+
+
+Started GET "/api/family_members/100" for ::1 at 2020-10-26 17:55:14 -0700
+Processing by Api::FamilyMembersController#show as JSON
+  Parameters: {"id"=>"100"}
+  [1m[36mFamilyMember Load (0.2ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" ORDER BY "family_members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/family_members_controller.rb:9:in `show'
+  Rendering api/family_members/show.json.jbuilder
+  [1m[36mFamilyMember Load (0.2ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 109]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  [1m[36mFamilyMember Load (0.2ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 111]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  [1m[36mFamilyMember Load (0.2ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 114]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 112]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  [1m[36mFamilyMember Load (0.2ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 113]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  [1m[36mFamilyMember Load (0.2ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 117]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  Rendered api/family_members/show.json.jbuilder (Duration: 10.2ms | Allocations: 6808)
+Completed 200 OK in 12ms (Views: 9.5ms | ActiveRecord: 1.3ms | Allocations: 7881)
+
+
+Started GET "/" for ::1 at 2020-10-26 17:57:37 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/carlosgarciajr/Documents/programming/yo_soy_garcia/public/packs
+[Webpacker] Hash: cc32b8a2acf75eea14c5
+Version: webpack 4.44.2
+Time: 1718ms
+Built at: 10/26/2020 5:57:39 PM
+                                       Asset       Size         Chunks                         Chunk Names
+      js/application-cd9baa997ab2a6e5febb.js   70.9 KiB    application  [emitted] [immutable]  application
+  js/application-cd9baa997ab2a6e5febb.js.map   80.2 KiB    application  [emitted] [dev]        application
+    js/yo_soy_garcia-5fe86de21c1beb31bf3c.js   1.91 MiB  yo_soy_garcia  [emitted] [immutable]  yo_soy_garcia
+js/yo_soy_garcia-5fe86de21c1beb31bf3c.js.map   2.13 MiB  yo_soy_garcia  [emitted] [dev]        yo_soy_garcia
+                               manifest.json  717 bytes                 [emitted]              
+Entrypoint application = js/application-cd9baa997ab2a6e5febb.js js/application-cd9baa997ab2a6e5febb.js.map
+Entrypoint yo_soy_garcia = js/yo_soy_garcia-5fe86de21c1beb31bf3c.js js/yo_soy_garcia-5fe86de21c1beb31bf3c.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/frontend/action-types/family_members_action_types.js] 109 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/actions/family_members_actions.js] 2.54 KiB {yo_soy_garcia} [built]
+[./app/javascript/frontend/reducers/entities_reducer.js] 161 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/reducers/family_member_reducer.js] 568 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/reducers/root_reducer.js] 141 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/selectors/family_tree_index_selector.js] 127 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/store/store.js] 393 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/utils/family_members_util.js] 259 bytes {yo_soy_garcia} [built]
+[./app/javascript/packs/application.js] 717 bytes {application} [built]
+[./app/javascript/packs/yo_soy_garcia.jsx] 891 bytes {yo_soy_garcia} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {yo_soy_garcia} [built]
+[./node_modules/webpack/buildin/harmony-module.js] (webpack)/buildin/harmony-module.js 631 bytes {yo_soy_garcia} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {yo_soy_garcia} [built]
+    + 122 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 2826ms (Views: 2825.8ms | ActiveRecord: 0.0ms | Allocations: 8879)
+
+
+Started GET "/api/family_members/find_all_family_trees" for ::1 at 2020-10-26 17:57:40 -0700
+Processing by Api::FamilyMembersController#find_all_family_trees as JSON
+  [1m[36mFamilyMember Load (11.2ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members"[0m
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  [1m[36mFamilyMemberChildParent Load (2.1ms)[0m  [1m[34mSELECT "family_member_child_parents".* FROM "family_member_child_parents" WHERE "family_member_child_parents"."parent_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9)[0m  [["parent_id", 109], ["parent_id", 110], ["parent_id", 111], ["parent_id", 112], ["parent_id", 113], ["parent_id", 114], ["parent_id", 115], ["parent_id", 116], ["parent_id", 117]]
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  [1m[36mFamilyMember Load (0.4ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" IN ($1, $2, $3, $4, $5)[0m  [["id", 111], ["id", 112], ["id", 113], ["id", 114], ["id", 117]]
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  Rendering api/family_members/show_all_family_trees.json.jbuilder
+  Rendered api/family_members/show_all_family_trees.json.jbuilder (Duration: 0.5ms | Allocations: 429)
+Completed 200 OK in 107ms (Views: 1.6ms | ActiveRecord: 46.8ms | Allocations: 19189)
+
+
+Started GET "/" for ::1 at 2020-10-26 17:58:34 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/carlosgarciajr/Documents/programming/yo_soy_garcia/public/packs
+[Webpacker] Hash: f27914f7bdc357443e74
+Version: webpack 4.44.2
+Time: 1669ms
+Built at: 10/26/2020 5:58:37 PM
+                                       Asset       Size         Chunks                         Chunk Names
+      js/application-cd9baa997ab2a6e5febb.js   70.9 KiB    application  [emitted] [immutable]  application
+  js/application-cd9baa997ab2a6e5febb.js.map   80.2 KiB    application  [emitted] [dev]        application
+    js/yo_soy_garcia-33d4d0ff0ef44cfcd101.js   1.91 MiB  yo_soy_garcia  [emitted] [immutable]  yo_soy_garcia
+js/yo_soy_garcia-33d4d0ff0ef44cfcd101.js.map   2.13 MiB  yo_soy_garcia  [emitted] [dev]        yo_soy_garcia
+                               manifest.json  717 bytes                 [emitted]              
+Entrypoint application = js/application-cd9baa997ab2a6e5febb.js js/application-cd9baa997ab2a6e5febb.js.map
+Entrypoint yo_soy_garcia = js/yo_soy_garcia-33d4d0ff0ef44cfcd101.js js/yo_soy_garcia-33d4d0ff0ef44cfcd101.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/frontend/action-types/family_members_action_types.js] 109 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/actions/family_members_actions.js] 2.54 KiB {yo_soy_garcia} [built]
+[./app/javascript/frontend/reducers/entities_reducer.js] 161 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/reducers/family_member_reducer.js] 568 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/reducers/root_reducer.js] 141 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/selectors/family_tree_index_selector.js] 127 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/store/store.js] 393 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/utils/family_members_util.js] 259 bytes {yo_soy_garcia} [built]
+[./app/javascript/packs/application.js] 717 bytes {application} [built]
+[./app/javascript/packs/yo_soy_garcia.jsx] 891 bytes {yo_soy_garcia} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {yo_soy_garcia} [built]
+[./node_modules/webpack/buildin/harmony-module.js] (webpack)/buildin/harmony-module.js 631 bytes {yo_soy_garcia} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {yo_soy_garcia} [built]
+    + 122 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 2776ms (Views: 2775.3ms | ActiveRecord: 0.0ms | Allocations: 8876)
+
+
+Started GET "/api/family_members/find_all_family_trees" for ::1 at 2020-10-26 17:58:37 -0700
+Processing by Api::FamilyMembersController#find_all_family_trees as JSON
+  [1m[36mFamilyMember Load (0.3ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members"[0m
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  [1m[36mFamilyMemberChildParent Load (0.4ms)[0m  [1m[34mSELECT "family_member_child_parents".* FROM "family_member_child_parents" WHERE "family_member_child_parents"."parent_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9)[0m  [["parent_id", 109], ["parent_id", 110], ["parent_id", 111], ["parent_id", 112], ["parent_id", 113], ["parent_id", 114], ["parent_id", 115], ["parent_id", 116], ["parent_id", 117]]
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  [1m[36mFamilyMember Load (0.3ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" IN ($1, $2, $3, $4, $5)[0m  [["id", 111], ["id", 112], ["id", 113], ["id", 114], ["id", 117]]
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  Rendering api/family_members/show_all_family_trees.json.jbuilder
+  Rendered api/family_members/show_all_family_trees.json.jbuilder (Duration: 0.3ms | Allocations: 429)
+Completed 200 OK in 46ms (Views: 1.2ms | ActiveRecord: 14.8ms | Allocations: 18934)
+
+
+Started GET "/" for ::1 at 2020-10-26 17:59:10 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/carlosgarciajr/Documents/programming/yo_soy_garcia/public/packs
+[Webpacker] Hash: ea4d2bceb2b3c2187bb5
+Version: webpack 4.44.2
+Time: 1728ms
+Built at: 10/26/2020 5:59:13 PM
+                                       Asset       Size         Chunks                         Chunk Names
+      js/application-cd9baa997ab2a6e5febb.js   70.9 KiB    application  [emitted] [immutable]  application
+  js/application-cd9baa997ab2a6e5febb.js.map   80.2 KiB    application  [emitted] [dev]        application
+    js/yo_soy_garcia-d3fd4c0f6e724506315e.js   1.91 MiB  yo_soy_garcia  [emitted] [immutable]  yo_soy_garcia
+js/yo_soy_garcia-d3fd4c0f6e724506315e.js.map   2.13 MiB  yo_soy_garcia  [emitted] [dev]        yo_soy_garcia
+                               manifest.json  717 bytes                 [emitted]              
+Entrypoint application = js/application-cd9baa997ab2a6e5febb.js js/application-cd9baa997ab2a6e5febb.js.map
+Entrypoint yo_soy_garcia = js/yo_soy_garcia-d3fd4c0f6e724506315e.js js/yo_soy_garcia-d3fd4c0f6e724506315e.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/frontend/action-types/family_members_action_types.js] 109 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/actions/family_members_actions.js] 2.54 KiB {yo_soy_garcia} [built]
+[./app/javascript/frontend/reducers/entities_reducer.js] 161 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/reducers/family_member_reducer.js] 568 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/reducers/root_reducer.js] 141 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/selectors/family_tree_index_selector.js] 127 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/store/store.js] 393 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/utils/family_members_util.js] 259 bytes {yo_soy_garcia} [built]
+[./app/javascript/packs/application.js] 717 bytes {application} [built]
+[./app/javascript/packs/yo_soy_garcia.jsx] 891 bytes {yo_soy_garcia} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {yo_soy_garcia} [built]
+[./node_modules/webpack/buildin/harmony-module.js] (webpack)/buildin/harmony-module.js 631 bytes {yo_soy_garcia} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {yo_soy_garcia} [built]
+    + 122 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 2828ms (Views: 2828.0ms | ActiveRecord: 0.0ms | Allocations: 8872)
+
+
+Started GET "/api/family_members/find_all_family_trees" for ::1 at 2020-10-26 17:59:13 -0700
+Processing by Api::FamilyMembersController#find_all_family_trees as JSON
+  [1m[36mFamilyMember Load (1.0ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members"[0m
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+Started GET "/api/family_members/110" for ::1 at 2020-10-26 17:59:13 -0700
+Processing by Api::FamilyMembersController#show as JSON
+  Parameters: {"id"=>"110"}
+  [1m[36mFamilyMember Load (9.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" ORDER BY "family_members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/family_members_controller.rb:9:in `show'
+  Rendering api/family_members/show.json.jbuilder
+  [1m[36mFamilyMemberChildParent Load (1.4ms)[0m  [1m[34mSELECT "family_member_child_parents".* FROM "family_member_child_parents" WHERE "family_member_child_parents"."parent_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9)[0m  [["parent_id", 109], ["parent_id", 110], ["parent_id", 111], ["parent_id", 112], ["parent_id", 113], ["parent_id", 114], ["parent_id", 115], ["parent_id", 116], ["parent_id", 117]]
+  [1m[36mFamilyMember Load (0.2ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 109]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  [1m[36mFamilyMember Load (0.6ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 111]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  [1m[36mFamilyMember Load (0.2ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 114]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  [1m[36mFamilyMember Load (0.7ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" IN ($1, $2, $3, $4, $5)[0m  [["id", 111], ["id", 112], ["id", 113], ["id", 114], ["id", 117]]
+  [1m[36mFamilyMember Load (0.2ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 112]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  Rendering api/family_members/show_all_family_trees.json.jbuilder
+  [1m[36mFamilyMember Load (1.0ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 113]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  Rendered api/family_members/show_all_family_trees.json.jbuilder (Duration: 0.3ms | Allocations: 428)
+Completed 200 OK in 79ms (Views: 2.2ms | ActiveRecord: 41.6ms | Allocations: 28761)
+
+
+  [1m[36mFamilyMember Load (0.3ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 117]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  Rendered api/family_members/show.json.jbuilder (Duration: 23.6ms | Allocations: 18045)
+Completed 200 OK in 51ms (Views: 20.0ms | ActiveRecord: 28.7ms | Allocations: 24544)
+
+
+Started GET "/" for ::1 at 2020-10-26 17:59:30 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 27.1ms | ActiveRecord: 0.0ms | Allocations: 7235)
+
+
+Started GET "/api/family_members/find_all_family_trees" for ::1 at 2020-10-26 17:59:30 -0700
+Processing by Api::FamilyMembersController#find_all_family_trees as JSON
+  [1m[36mFamilyMember Load (0.3ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members"[0m
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  [1m[36mFamilyMemberChildParent Load (0.8ms)[0m  [1m[34mSELECT "family_member_child_parents".* FROM "family_member_child_parents" WHERE "family_member_child_parents"."parent_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9)[0m  [["parent_id", 109], ["parent_id", 110], ["parent_id", 111], ["parent_id", 112], ["parent_id", 113], ["parent_id", 114], ["parent_id", 115], ["parent_id", 116], ["parent_id", 117]]
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  [1m[36mFamilyMember Load (0.3ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" IN ($1, $2, $3, $4, $5)[0m  [["id", 111], ["id", 112], ["id", 113], ["id", 114], ["id", 117]]
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  Rendering api/family_members/show_all_family_trees.json.jbuilder
+  Rendered api/family_members/show_all_family_trees.json.jbuilder (Duration: 0.6ms | Allocations: 427)
+Completed 200 OK in 10ms (Views: 1.2ms | ActiveRecord: 1.5ms | Allocations: 5037)
+
+
+Started GET "/api/family_members/110" for ::1 at 2020-10-26 17:59:30 -0700
+Processing by Api::FamilyMembersController#show as JSON
+  Parameters: {"id"=>"110"}
+  [1m[36mFamilyMember Load (1.9ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" ORDER BY "family_members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/family_members_controller.rb:9:in `show'
+  Rendering api/family_members/show.json.jbuilder
+  [1m[36mFamilyMember Load (0.3ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 109]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  [1m[36mFamilyMember Load (5.8ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 111]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  [1m[36mFamilyMember Load (0.2ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 114]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  [1m[36mFamilyMember Load (0.5ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 112]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  [1m[36mFamilyMember Load (0.2ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 113]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  [1m[36mFamilyMember Load (0.3ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 117]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  Rendered api/family_members/show.json.jbuilder (Duration: 19.6ms | Allocations: 6808)
+Completed 200 OK in 24ms (Views: 12.8ms | ActiveRecord: 9.3ms | Allocations: 7878)
+
+
+Started GET "/" for ::1 at 2020-10-26 17:59:32 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/carlosgarciajr/Documents/programming/yo_soy_garcia/public/packs
+[Webpacker] Hash: f613991fb2cc6ecddad5
+Version: webpack 4.44.2
+Time: 1739ms
+Built at: 10/26/2020 5:59:34 PM
+                                       Asset       Size         Chunks                         Chunk Names
+      js/application-cd9baa997ab2a6e5febb.js   70.9 KiB    application  [emitted] [immutable]  application
+  js/application-cd9baa997ab2a6e5febb.js.map   80.2 KiB    application  [emitted] [dev]        application
+    js/yo_soy_garcia-e1f3d0db6fdfd2058b20.js   1.91 MiB  yo_soy_garcia  [emitted] [immutable]  yo_soy_garcia
+js/yo_soy_garcia-e1f3d0db6fdfd2058b20.js.map   2.13 MiB  yo_soy_garcia  [emitted] [dev]        yo_soy_garcia
+                               manifest.json  717 bytes                 [emitted]              
+Entrypoint application = js/application-cd9baa997ab2a6e5febb.js js/application-cd9baa997ab2a6e5febb.js.map
+Entrypoint yo_soy_garcia = js/yo_soy_garcia-e1f3d0db6fdfd2058b20.js js/yo_soy_garcia-e1f3d0db6fdfd2058b20.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/frontend/action-types/family_members_action_types.js] 109 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/actions/family_members_actions.js] 2.54 KiB {yo_soy_garcia} [built]
+[./app/javascript/frontend/reducers/entities_reducer.js] 161 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/reducers/family_member_reducer.js] 568 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/reducers/root_reducer.js] 141 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/selectors/family_tree_index_selector.js] 127 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/store/store.js] 393 bytes {yo_soy_garcia} [built]
+[./app/javascript/frontend/utils/family_members_util.js] 259 bytes {yo_soy_garcia} [built]
+[./app/javascript/packs/application.js] 717 bytes {application} [built]
+[./app/javascript/packs/yo_soy_garcia.jsx] 891 bytes {yo_soy_garcia} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {yo_soy_garcia} [built]
+[./node_modules/webpack/buildin/harmony-module.js] (webpack)/buildin/harmony-module.js 631 bytes {yo_soy_garcia} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {yo_soy_garcia} [built]
+    + 122 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 2904ms (Views: 2903.7ms | ActiveRecord: 0.0ms | Allocations: 8923)
+
+
+Started GET "/api/family_members/find_all_family_trees" for ::1 at 2020-10-26 17:59:35 -0700
+Processing by Api::FamilyMembersController#find_all_family_trees as JSON
+Started GET "/api/family_members/110" for ::1 at 2020-10-26 17:59:35 -0700
+  [1m[36mFamilyMember Load (15.8ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members"[0m
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+Processing by Api::FamilyMembersController#show as JSON
+  Parameters: {"id"=>"110"}
+  [1m[36mFamilyMember Load (0.2ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" ORDER BY "family_members"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/family_members_controller.rb:9:in `show'
+  Rendering api/family_members/show.json.jbuilder
+  [1m[36mFamilyMemberChildParent Load (1.7ms)[0m  [1m[34mSELECT "family_member_child_parents".* FROM "family_member_child_parents" WHERE "family_member_child_parents"."parent_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9)[0m  [["parent_id", 109], ["parent_id", 110], ["parent_id", 111], ["parent_id", 112], ["parent_id", 113], ["parent_id", 114], ["parent_id", 115], ["parent_id", 116], ["parent_id", 117]]
+  [1m[36mFamilyMember Load (0.4ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 109]]
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  [1m[36mFamilyMember Load (0.2ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 111]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  [1m[36mFamilyMember Load (6.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 114]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  [1m[36mFamilyMember Load (2.3ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" IN ($1, $2, $3, $4, $5)[0m  [["id", 111], ["id", 112], ["id", 113], ["id", 114], ["id", 117]]
+  [1m[36mFamilyMember Load (0.4ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 112]]
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  Rendering api/family_members/show_all_family_trees.json.jbuilder
+  Rendered api/family_members/show_all_family_trees.json.jbuilder (Duration: 0.6ms | Allocations: 428)
+Completed 200 OK in 71ms (Views: 1.6ms | ActiveRecord: 32.9ms | Allocations: 27197)
+
+
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  [1m[36mFamilyMember Load (1.2ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 113]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  [1m[36mFamilyMember Load (0.7ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" INNER JOIN "family_member_child_parents" ON "family_members"."id" = "family_member_child_parents"."child_id" WHERE "family_member_child_parents"."parent_id" = $1[0m  [["parent_id", 117]]
+  ↳ app/models/family_member.rb:41:in `create_family_tree'
+  Rendered api/family_members/show.json.jbuilder (Duration: 32.6ms | Allocations: 18048)
+Completed 200 OK in 57ms (Views: 28.8ms | ActiveRecord: 16.7ms | Allocations: 24537)
+
+
