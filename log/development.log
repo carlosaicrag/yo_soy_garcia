@@ -19471,3 +19471,42 @@ Completed 200 OK in 215ms (Views: 1.1ms | ActiveRecord: 166.4ms | Allocations: 2
 Completed 200 OK in 142ms (Views: 57.9ms | ActiveRecord: 65.6ms | Allocations: 24937)
 
 
+Started GET "/api/family_members/find_all_family_trees" for ::1 at 2020-10-27 15:33:24 -0700
+Processing by Api::FamilyMembersController#find_all_family_trees as JSON
+  [1m[36mFamilyMember Load (1.0ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members"[0m
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  [1m[36mFamilyMemberChildParent Load (0.9ms)[0m  [1m[34mSELECT "family_member_child_parents".* FROM "family_member_child_parents" WHERE "family_member_child_parents"."parent_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9)[0m  [["parent_id", 109], ["parent_id", 110], ["parent_id", 111], ["parent_id", 112], ["parent_id", 113], ["parent_id", 114], ["parent_id", 115], ["parent_id", 116], ["parent_id", 117]]
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  [1m[36mFamilyMember Load (0.7ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" IN ($1, $2, $3, $4, $5)[0m  [["id", 111], ["id", 112], ["id", 113], ["id", 114], ["id", 117]]
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  Rendering api/family_members/show_all_family_trees.json.jbuilder
+  Rendered api/family_members/show_all_family_trees.json.jbuilder (Duration: 0.4ms | Allocations: 427)
+Completed 200 OK in 12ms (Views: 1.0ms | ActiveRecord: 2.6ms | Allocations: 5133)
+
+
+Started GET "/api/family_members/find_all_family_trees" for ::1 at 2020-10-27 15:33:32 -0700
+Processing by Api::FamilyMembersController#find_all_family_trees as JSON
+  [1m[36mFamilyMember Load (0.7ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members"[0m
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  [1m[36mFamilyMemberChildParent Load (0.4ms)[0m  [1m[34mSELECT "family_member_child_parents".* FROM "family_member_child_parents" WHERE "family_member_child_parents"."parent_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9)[0m  [["parent_id", 109], ["parent_id", 110], ["parent_id", 111], ["parent_id", 112], ["parent_id", 113], ["parent_id", 114], ["parent_id", 115], ["parent_id", 116], ["parent_id", 117]]
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  [1m[36mFamilyMember Load (0.5ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" IN ($1, $2, $3, $4, $5)[0m  [["id", 111], ["id", 112], ["id", 113], ["id", 114], ["id", 117]]
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  Rendering api/family_members/show_all_family_trees.json.jbuilder
+  Rendered api/family_members/show_all_family_trees.json.jbuilder (Duration: 0.3ms | Allocations: 427)
+Completed 200 OK in 11ms (Views: 1.0ms | ActiveRecord: 1.6ms | Allocations: 5037)
+
+
+Started GET "/api/family_members/find_all_family_trees" for ::1 at 2020-10-27 15:42:42 -0700
+Processing by Api::FamilyMembersController#find_all_family_trees as JSON
+  [1m[36mFamilyMember Load (0.6ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members"[0m
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  [1m[36mFamilyMemberChildParent Load (1.0ms)[0m  [1m[34mSELECT "family_member_child_parents".* FROM "family_member_child_parents" WHERE "family_member_child_parents"."parent_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9)[0m  [["parent_id", 109], ["parent_id", 110], ["parent_id", 111], ["parent_id", 112], ["parent_id", 113], ["parent_id", 114], ["parent_id", 115], ["parent_id", 116], ["parent_id", 117]]
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  [1m[36mFamilyMember Load (0.6ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" IN ($1, $2, $3, $4, $5)[0m  [["id", 111], ["id", 112], ["id", 113], ["id", 114], ["id", 117]]
+  ↳ app/models/family_member.rb:56:in `find_members_with_children'
+  Rendering api/family_members/show_all_family_trees.json.jbuilder
+  Rendered api/family_members/show_all_family_trees.json.jbuilder (Duration: 0.6ms | Allocations: 427)
+Completed 200 OK in 11ms (Views: 1.2ms | ActiveRecord: 2.2ms | Allocations: 5133)
+
+
