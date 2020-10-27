@@ -17,10 +17,10 @@ export default class FamilyTreeShowComponent extends React.Component {
     if (this.state.fetching){
       return <div></div>
     }
-    debugger
+
     return(
-      <div id="treeWrapper" style={{width: '50em', height: '50em'}}>
-        <Tree data={this.props.familyMember.family_tree} orientation="vertical"></Tree>
+      <div id="profile-container">
+        <Tree className="treeWrapper" data={this.props.familyMember.family_tree} orientation="vertical"></Tree>
       </div>
     )
   }

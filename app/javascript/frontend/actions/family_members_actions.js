@@ -19,17 +19,10 @@ const receiveTrees = (payload) => {
 //thunk action creatorS
 export const fetchFamilyTree = (familyMemberId) => {
   return async (dispatch) => {
-    try{
-      const response = await fetch(`http://localhost:3000/api/family_members/${familyMemberId}`).then((response) => {
-        return response.json()
-      }).then(data => {
-        dispatch(receiveTree(data))
-      })
-      return response
-    } 
-    catch (error) {
-      // debugger
-    }
+    return FamilyMemberUtil.fetchFamilyTree(familyMemberId).then( (payload) => {
+      dispatch(receiveTree(payload))
+      return payload
+    })
   }
 }
 

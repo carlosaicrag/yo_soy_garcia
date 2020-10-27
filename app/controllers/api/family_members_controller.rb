@@ -6,7 +6,7 @@ class Api::FamilyMembersController < ApplicationController
   end
 
   def show # this shows a family tree for a specefic member of family
-    @root = FamilyMember.where
+    @root = FamilyMember.find_by(id: params[:id])
     render :show
   end
 end
