@@ -2,9 +2,9 @@ import {connect} from "react-redux"
 import { fetchFamilyTree } from "../../actions/family_members_actions"
 import FamilyTreeShow from "./family_tree_show_component"
 
-const msp = (store) => {
+const msp = (store,ownProps) => {
   return {
-    familyMember: store.familyMemberReducer[100]
+    familyMember: store.familyMembers[ownProps.match.params.familyMemberId]
   }
 }
 

@@ -1,8 +1,9 @@
 import React from "react"
+import {Link} from "react-router-dom"
 
-export default FamilyTreesIndexItem = ({familyMember}) => {
+const FamilyTreesIndexItem = ({familyMember}) => {
   return (
-    <div className="family-member-index-item-container">
+    <Link to={`familyTrees/${familyMember.id}`} className="family-member-index-item-container">
       <div className="family-member-index-item-picture"> {/*this is a picture of root familyMember*/}
 
       </div>
@@ -15,6 +16,8 @@ export default FamilyTreesIndexItem = ({familyMember}) => {
           {familyMember.lname}
         </div>
       </div>
-    </div>
+    </Link>
   )
 }
+
+export default FamilyTreesIndexItem
