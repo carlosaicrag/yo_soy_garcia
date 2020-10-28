@@ -1,13 +1,14 @@
-.profile-container{
-  display:flex;
+.profile-container {
+  display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
 
-  #treeWrapper {
-    display:flex;
+  .tree-wrapper {
+    display: flex;
     justify-content: center;
     align-items: center;
-    width: 50em
+    width: 500px;
+    height: 500px;
   }
 }
