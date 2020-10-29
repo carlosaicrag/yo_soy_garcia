@@ -25,11 +25,17 @@ class FamilyTreesIndex extends React.Component {
     })
     return (
       <div className="family-tree-index-container">
+        <div className="upcoming-events-container">
+          <h1>Upcoming Events</h1>
+        </div>
         <div className="family-tree-index-title-items-container">
           <h1>Family Trees</h1>
           <div className="family-member-index-items-container">
             {indexItems}
           </div>
+        </div>
+        <div className="upcoming-birthdays-container">
+          <h1>Upcoming Birthdays</h1>
         </div>
       </div>
     )

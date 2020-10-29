@@ -24,21 +24,58 @@ export default class FamilyTreeShowComponent extends React.Component {
     if(this.state.fetching){
       return <div></div>
     }else{
-      return <Tree className="treeWrapper" 
-          data={this.props.familyMember.family_tree} 
-          orientation="vertical"
-          translate={this.state.translate}
+      return (
+          <Tree className="treeWrapper" 
+              data={this.props.familyMember.family_tree} 
+              orientation="vertical"
+              translate={this.state.translate}
           ></Tree>
+      )
     }
     
   }
 
+  createDetailsPicture(){
+    if(this.state.fetching){
+      return <div></div>
+    }else{
+      return (
+          <div className="details-picture-container">
+            <div className="details-picture">
+
+            </div>
+          </div>
+      )
+    }
+  }
+
+  createDetailsInfo(){
+    if(this.state.fetching){
+      return <div></div>
+    }else{
+      return (
+          <div className="details-info-container">
+            <div>First Name: banana</div>
+            <div>Last Name: banana</div>
+            <div>Number of Children: 10000</div>
+            <div>Parent1: banana</div>
+            <div>Parent2: banana</div>
+          </div>
+      )
+    }
+  }
+
   render(){
-    
     return(
-      <div className="profile-container">
-        <div className="tree-wrapper" ref={tc => (this.treeContainer = tc)}>
-          {this.createTree()}
+      <div className="show-container">
+        <div className="profile-container">
+          <div className="profile-details-container">
+            {this.createDetailsPicture()}
+            {this.createDetailsInfo()}
+          </div>
+          <div className="tree-wrapper" ref={tc => (this.treeContainer = tc)}>
+            {this.createTree()}
+          </div>
         </div>
       </div>
     )

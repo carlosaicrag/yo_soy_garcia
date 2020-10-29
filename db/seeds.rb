@@ -10,6 +10,7 @@ FamilyMember.destroy_all
 FamilyMemberChildParent.destroy_all
 Spouse.destroy_all
 
+# Carlos Garcia's Senior Family 
 carlos_senior = FamilyMember.create(fname: "Carlos", lname: "Garcia", sex: "M")
 manuela = FamilyMember.create(fname: "Manuela", lname: "Apolinar", sex: "F")
 sandra = FamilyMember.create(fname: "Sandra", lname: "Garcia", sex: "F")
@@ -34,3 +35,37 @@ melina_child_garcia = FamilyMemberChildParent.create(parent_id: manuela.id, chil
 carlos_manuela = Spouse.create(partner_1_id: carlos_senior.id, partner_2_id: manuela.id, current_spouse: true)
 carlos_sandra = Spouse.create(partner_2_id: carlos_cortez.id, partner_1_id: sandra.id, current_spouse: true)
 daniel_melina = Spouse.create(partner_2_id: daniel_senior.id, partner_1_id: melina.id, current_spouse: true)
+
+# Socorro Garcia Family
+socorro = FamilyMember.create(fname: "Socorro", lname: "Garcia", sex: "F")
+claudia = FamilyMember.create(fname: "Claudia", lname: "Garcia", sex: "F")
+miguel = FamilyMember.create(fname: "Miguel", lname: "Cruz", sex: "M")
+jessica = FamilyMember.create(fname: "Jessica", lname: "Rodriguez", sex: "F")
+veronica = FamilyMember.create(fname: "Veronica", lname: "Estrada", sex: "F")
+josefina = FamilyMember.create(fname: "Josefina", lname: "Rodriguez", sex: "F")
+monica = FamilyMember.create(fname: "Monica", lname: "Rodriguez", sex: "F")
+
+claudia_child_garcia = FamilyMemberChildParent.create(parent_id: socorro.id, child_id: claudia.id)
+miguel_child_garcia = FamilyMemberChildParent.create(parent_id: socorro.id, child_id: miguel.id)
+jessica_child_garcia = FamilyMemberChildParent.create(parent_id: socorro.id, child_id: jessica.id)
+veronica_child_garcia= FamilyMemberChildParent.create(parent_id: socorro.id, child_id: veronica.id)
+josefina_child_garcia = FamilyMemberChildParent.create(parent_id: socorro.id, child_id: josefina.id)
+monica_child_garcia = FamilyMemberChildParent.create(parent_id: socorro.id, child_id: monica.id)
+
+# Elva Garcia Robles Family
+elva = FamilyMember.create(fname: "Elva", lname: "Robles", sex: "F")
+norma = FamilyMember.create(fname: "Norma", lname: "Garcia-Lopez", sex: "F")
+ana = FamilyMember.create(fname: "Ana", lname: "Robles", sex: "F")
+gloria = FamilyMember.create(fname: "Gloria", lname: "Corona", sex: "M")
+vanessa = FamilyMember.create(fname: "Vanessa", lname: "Corona", sex: "F")
+monica = FamilyMember.create(fname: "Monica", lname: "Robles", sex: "F")
+juliana = FamilyMember.create(fname: "Juliana", lname: "Robles", sex: "F")
+isabel = FamilyMember.create(fname: "Isabel", lname: "Robles", sex: "F")
+
+norma_child_garcia = FamilyMemberChildParent.create(parent_id: elva.id, child_id: norma.id)
+ana_child_garcia = FamilyMemberChildParent.create(parent_id: elva.id, child_id: ana.id)
+gloria_child_garcia = FamilyMemberChildParent.create(parent_id: elva.id, child_id: gloria.id)
+vanessa_child_garcia= FamilyMemberChildParent.create(parent_id: elva.id, child_id: vanessa.id)
+monica_child_garcia = FamilyMemberChildParent.create(parent_id: elva.id, child_id: monica.id)
+juliana_child_garcia = FamilyMemberChildParent.create(parent_id: elva.id, child_id: juliana.id)
+isabel_child_garcia = FamilyMemberChildParent.create(parent_id: elva.id, child_id: isabel.id)

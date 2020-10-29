@@ -22706,3 +22706,259 @@ Completed 200 OK in 15ms (Views: 1.5ms | ActiveRecord: 4.4ms | Allocations: 6696
 Completed 200 OK in 20ms (Views: 15.2ms | ActiveRecord: 3.3ms | Allocations: 8477)
 
 
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mFamilyMember Load (0.5ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members"[0m
+  [1m[35m (4.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamilyMember Destroy (4.0ms)[0m  [1m[31mDELETE FROM "family_members" WHERE "family_members"."id" = $1[0m  [["id", 109]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamilyMember Destroy (0.2ms)[0m  [1m[31mDELETE FROM "family_members" WHERE "family_members"."id" = $1[0m  [["id", 110]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamilyMember Destroy (0.2ms)[0m  [1m[31mDELETE FROM "family_members" WHERE "family_members"."id" = $1[0m  [["id", 111]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamilyMember Destroy (0.2ms)[0m  [1m[31mDELETE FROM "family_members" WHERE "family_members"."id" = $1[0m  [["id", 112]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamilyMember Destroy (0.2ms)[0m  [1m[31mDELETE FROM "family_members" WHERE "family_members"."id" = $1[0m  [["id", 113]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamilyMember Destroy (0.1ms)[0m  [1m[31mDELETE FROM "family_members" WHERE "family_members"."id" = $1[0m  [["id", 114]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamilyMember Destroy (0.2ms)[0m  [1m[31mDELETE FROM "family_members" WHERE "family_members"."id" = $1[0m  [["id", 115]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamilyMember Destroy (0.3ms)[0m  [1m[31mDELETE FROM "family_members" WHERE "family_members"."id" = $1[0m  [["id", 116]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamilyMember Destroy (0.1ms)[0m  [1m[31mDELETE FROM "family_members" WHERE "family_members"."id" = $1[0m  [["id", 117]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mFamilyMemberChildParent Load (3.7ms)[0m  [1m[34mSELECT "family_member_child_parents".* FROM "family_member_child_parents"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamilyMemberChildParent Destroy (0.2ms)[0m  [1m[31mDELETE FROM "family_member_child_parents" WHERE "family_member_child_parents"."id" = $1[0m  [["id", 61]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamilyMemberChildParent Destroy (0.3ms)[0m  [1m[31mDELETE FROM "family_member_child_parents" WHERE "family_member_child_parents"."id" = $1[0m  [["id", 62]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamilyMemberChildParent Destroy (0.3ms)[0m  [1m[31mDELETE FROM "family_member_child_parents" WHERE "family_member_child_parents"."id" = $1[0m  [["id", 63]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamilyMemberChildParent Destroy (0.2ms)[0m  [1m[31mDELETE FROM "family_member_child_parents" WHERE "family_member_child_parents"."id" = $1[0m  [["id", 64]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamilyMemberChildParent Destroy (0.1ms)[0m  [1m[31mDELETE FROM "family_member_child_parents" WHERE "family_member_child_parents"."id" = $1[0m  [["id", 65]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamilyMemberChildParent Destroy (0.2ms)[0m  [1m[31mDELETE FROM "family_member_child_parents" WHERE "family_member_child_parents"."id" = $1[0m  [["id", 66]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamilyMemberChildParent Destroy (0.2ms)[0m  [1m[31mDELETE FROM "family_member_child_parents" WHERE "family_member_child_parents"."id" = $1[0m  [["id", 67]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamilyMemberChildParent Destroy (0.2ms)[0m  [1m[31mDELETE FROM "family_member_child_parents" WHERE "family_member_child_parents"."id" = $1[0m  [["id", 68]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSpouse Load (0.6ms)[0m  [1m[34mSELECT "spouses".* FROM "spouses"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSpouse Destroy (0.2ms)[0m  [1m[31mDELETE FROM "spouses" WHERE "spouses"."id" = $1[0m  [["id", 16]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSpouse Destroy (0.2ms)[0m  [1m[31mDELETE FROM "spouses" WHERE "spouses"."id" = $1[0m  [["id", 17]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSpouse Destroy (0.2ms)[0m  [1m[31mDELETE FROM "spouses" WHERE "spouses"."id" = $1[0m  [["id", 18]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamilyMember Create (3.3ms)[0m  [1m[32mINSERT INTO "family_members" ("fname", "lname", "sex", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["fname", "Carlos"], ["lname", "Garcia"], ["sex", "M"], ["created_at", "2020-10-28 23:16:20.246782"], ["updated_at", "2020-10-28 23:16:20.246782"]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamilyMember Create (0.2ms)[0m  [1m[32mINSERT INTO "family_members" ("fname", "lname", "sex", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["fname", "Manuela"], ["lname", "Apolinar"], ["sex", "F"], ["created_at", "2020-10-28 23:16:20.253115"], ["updated_at", "2020-10-28 23:16:20.253115"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamilyMember Create (0.2ms)[0m  [1m[32mINSERT INTO "family_members" ("fname", "lname", "sex", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["fname", "Sandra"], ["lname", "Garcia"], ["sex", "F"], ["created_at", "2020-10-28 23:16:20.255901"], ["updated_at", "2020-10-28 23:16:20.255901"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamilyMember Create (0.3ms)[0m  [1m[32mINSERT INTO "family_members" ("fname", "lname", "sex", "created_at", "updated_at", "nickname") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["fname", "Carlos"], ["lname", "Garcia"], ["sex", "M"], ["created_at", "2020-10-28 23:16:20.258811"], ["updated_at", "2020-10-28 23:16:20.258811"], ["nickname", "Charlie"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamilyMember Create (0.6ms)[0m  [1m[32mINSERT INTO "family_members" ("fname", "lname", "sex", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["fname", "Melina"], ["lname", "Silva"], ["sex", "F"], ["created_at", "2020-10-28 23:16:20.261550"], ["updated_at", "2020-10-28 23:16:20.261550"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamilyMember Create (0.2ms)[0m  [1m[32mINSERT INTO "family_members" ("fname", "lname", "sex", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["fname", "Robert"], ["lname", "Cortez"], ["sex", "M"], ["created_at", "2020-10-28 23:16:20.264554"], ["updated_at", "2020-10-28 23:16:20.264554"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamilyMember Create (0.2ms)[0m  [1m[32mINSERT INTO "family_members" ("fname", "lname", "sex", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["fname", "Carlos"], ["lname", "Cortez"], ["sex", "M"], ["created_at", "2020-10-28 23:16:20.267231"], ["updated_at", "2020-10-28 23:16:20.267231"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamilyMember Create (0.3ms)[0m  [1m[32mINSERT INTO "family_members" ("fname", "lname", "sex", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["fname", "Daniel"], ["lname", "Sanchez"], ["sex", "M"], ["created_at", "2020-10-28 23:16:20.274104"], ["updated_at", "2020-10-28 23:16:20.274104"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamilyMember Create (0.3ms)[0m  [1m[32mINSERT INTO "family_members" ("fname", "lname", "sex", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["fname", "Daniel"], ["lname", "Sanchez"], ["sex", "M"], ["created_at", "2020-10-28 23:16:20.277235"], ["updated_at", "2020-10-28 23:16:20.277235"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamilyMember Load (0.5ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" = $1 LIMIT $2[0m  [["id", 118], ["LIMIT", 1]]
+  [1m[36mFamilyMember Load (0.2ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" = $1 LIMIT $2[0m  [["id", 120], ["LIMIT", 1]]
+  [1m[36mFamilyMemberChildParent Create (0.7ms)[0m  [1m[32mINSERT INTO "family_member_child_parents" ("created_at", "updated_at", "parent_id", "child_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-10-28 23:16:20.292301"], ["updated_at", "2020-10-28 23:16:20.292301"], ["parent_id", 118], ["child_id", 120]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamilyMember Load (0.2ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" = $1 LIMIT $2[0m  [["id", 118], ["LIMIT", 1]]
+  [1m[36mFamilyMember Load (0.2ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" = $1 LIMIT $2[0m  [["id", 121], ["LIMIT", 1]]
+  [1m[36mFamilyMemberChildParent Create (0.3ms)[0m  [1m[32mINSERT INTO "family_member_child_parents" ("created_at", "updated_at", "parent_id", "child_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-10-28 23:16:20.298298"], ["updated_at", "2020-10-28 23:16:20.298298"], ["parent_id", 118], ["child_id", 121]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamilyMember Load (0.2ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" = $1 LIMIT $2[0m  [["id", 118], ["LIMIT", 1]]
+  [1m[36mFamilyMember Load (0.2ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" = $1 LIMIT $2[0m  [["id", 122], ["LIMIT", 1]]
+  [1m[36mFamilyMemberChildParent Create (0.2ms)[0m  [1m[32mINSERT INTO "family_member_child_parents" ("created_at", "updated_at", "parent_id", "child_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-10-28 23:16:20.303812"], ["updated_at", "2020-10-28 23:16:20.303812"], ["parent_id", 118], ["child_id", 122]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" = $1 LIMIT $2[0m  [["id", 120], ["LIMIT", 1]]
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" = $1 LIMIT $2[0m  [["id", 123], ["LIMIT", 1]]
+  [1m[36mFamilyMemberChildParent Create (0.3ms)[0m  [1m[32mINSERT INTO "family_member_child_parents" ("created_at", "updated_at", "parent_id", "child_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-10-28 23:16:20.309006"], ["updated_at", "2020-10-28 23:16:20.309006"], ["parent_id", 120], ["child_id", 123]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" = $1 LIMIT $2[0m  [["id", 122], ["LIMIT", 1]]
+  [1m[36mFamilyMember Load (0.2ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" = $1 LIMIT $2[0m  [["id", 126], ["LIMIT", 1]]
+  [1m[36mFamilyMemberChildParent Create (0.4ms)[0m  [1m[32mINSERT INTO "family_member_child_parents" ("created_at", "updated_at", "parent_id", "child_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-10-28 23:16:20.314496"], ["updated_at", "2020-10-28 23:16:20.314496"], ["parent_id", 122], ["child_id", 126]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" = $1 LIMIT $2[0m  [["id", 119], ["LIMIT", 1]]
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" = $1 LIMIT $2[0m  [["id", 120], ["LIMIT", 1]]
+  [1m[36mFamilyMemberChildParent Create (0.2ms)[0m  [1m[32mINSERT INTO "family_member_child_parents" ("created_at", "updated_at", "parent_id", "child_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-10-28 23:16:20.319837"], ["updated_at", "2020-10-28 23:16:20.319837"], ["parent_id", 119], ["child_id", 120]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" = $1 LIMIT $2[0m  [["id", 119], ["LIMIT", 1]]
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" = $1 LIMIT $2[0m  [["id", 121], ["LIMIT", 1]]
+  [1m[36mFamilyMemberChildParent Create (0.2ms)[0m  [1m[32mINSERT INTO "family_member_child_parents" ("created_at", "updated_at", "parent_id", "child_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-10-28 23:16:20.324791"], ["updated_at", "2020-10-28 23:16:20.324791"], ["parent_id", 119], ["child_id", 121]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" = $1 LIMIT $2[0m  [["id", 119], ["LIMIT", 1]]
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" = $1 LIMIT $2[0m  [["id", 122], ["LIMIT", 1]]
+  [1m[36mFamilyMemberChildParent Create (0.2ms)[0m  [1m[32mINSERT INTO "family_member_child_parents" ("created_at", "updated_at", "parent_id", "child_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-10-28 23:16:20.329716"], ["updated_at", "2020-10-28 23:16:20.329716"], ["parent_id", 119], ["child_id", 122]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" = $1 LIMIT $2[0m  [["id", 118], ["LIMIT", 1]]
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" = $1 LIMIT $2[0m  [["id", 119], ["LIMIT", 1]]
+  [1m[36mSpouse Create (0.3ms)[0m  [1m[32mINSERT INTO "spouses" ("partner_1_id", "partner_2_id", "created_at", "updated_at", "current_spouse") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["partner_1_id", 118], ["partner_2_id", 119], ["created_at", "2020-10-28 23:16:20.335680"], ["updated_at", "2020-10-28 23:16:20.335680"], ["current_spouse", true]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" = $1 LIMIT $2[0m  [["id", 120], ["LIMIT", 1]]
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" = $1 LIMIT $2[0m  [["id", 124], ["LIMIT", 1]]
+  [1m[36mSpouse Create (0.2ms)[0m  [1m[32mINSERT INTO "spouses" ("partner_1_id", "partner_2_id", "created_at", "updated_at", "current_spouse") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["partner_1_id", 120], ["partner_2_id", 124], ["created_at", "2020-10-28 23:16:20.340933"], ["updated_at", "2020-10-28 23:16:20.340933"], ["current_spouse", true]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" = $1 LIMIT $2[0m  [["id", 122], ["LIMIT", 1]]
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" = $1 LIMIT $2[0m  [["id", 125], ["LIMIT", 1]]
+  [1m[36mSpouse Create (0.2ms)[0m  [1m[32mINSERT INTO "spouses" ("partner_1_id", "partner_2_id", "created_at", "updated_at", "current_spouse") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["partner_1_id", 122], ["partner_2_id", 125], ["created_at", "2020-10-28 23:16:20.345923"], ["updated_at", "2020-10-28 23:16:20.345923"], ["current_spouse", true]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamilyMember Create (0.2ms)[0m  [1m[32mINSERT INTO "family_members" ("fname", "lname", "sex", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["fname", "Socorro"], ["lname", "Garcia"], ["sex", "F"], ["created_at", "2020-10-28 23:16:20.348000"], ["updated_at", "2020-10-28 23:16:20.348000"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamilyMember Create (0.2ms)[0m  [1m[32mINSERT INTO "family_members" ("fname", "lname", "sex", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["fname", "Claudia"], ["lname", "Garcia"], ["sex", "F"], ["created_at", "2020-10-28 23:16:20.351047"], ["updated_at", "2020-10-28 23:16:20.351047"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamilyMember Create (0.3ms)[0m  [1m[32mINSERT INTO "family_members" ("fname", "lname", "sex", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["fname", "Miguel"], ["lname", "Cruz"], ["sex", "M"], ["created_at", "2020-10-28 23:16:20.353976"], ["updated_at", "2020-10-28 23:16:20.353976"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamilyMember Create (0.2ms)[0m  [1m[32mINSERT INTO "family_members" ("fname", "lname", "sex", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["fname", "Jessica"], ["lname", "Rodriguez"], ["sex", "F"], ["created_at", "2020-10-28 23:16:20.357035"], ["updated_at", "2020-10-28 23:16:20.357035"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamilyMember Create (0.2ms)[0m  [1m[32mINSERT INTO "family_members" ("fname", "lname", "sex", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["fname", "Veronica"], ["lname", "Estrada"], ["sex", "F"], ["created_at", "2020-10-28 23:16:20.360019"], ["updated_at", "2020-10-28 23:16:20.360019"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamilyMember Create (0.2ms)[0m  [1m[32mINSERT INTO "family_members" ("fname", "lname", "sex", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["fname", "Josefina"], ["lname", "Rodriguez"], ["sex", "F"], ["created_at", "2020-10-28 23:16:20.362734"], ["updated_at", "2020-10-28 23:16:20.362734"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamilyMember Create (0.3ms)[0m  [1m[32mINSERT INTO "family_members" ("fname", "lname", "sex", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["fname", "Monica"], ["lname", "Rodriguez"], ["sex", "F"], ["created_at", "2020-10-28 23:16:20.365637"], ["updated_at", "2020-10-28 23:16:20.365637"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" = $1 LIMIT $2[0m  [["id", 127], ["LIMIT", 1]]
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" = $1 LIMIT $2[0m  [["id", 128], ["LIMIT", 1]]
+  [1m[36mFamilyMemberChildParent Create (0.3ms)[0m  [1m[32mINSERT INTO "family_member_child_parents" ("created_at", "updated_at", "parent_id", "child_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-10-28 23:16:20.372079"], ["updated_at", "2020-10-28 23:16:20.372079"], ["parent_id", 127], ["child_id", 128]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" = $1 LIMIT $2[0m  [["id", 127], ["LIMIT", 1]]
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" = $1 LIMIT $2[0m  [["id", 129], ["LIMIT", 1]]
+  [1m[36mFamilyMemberChildParent Create (0.3ms)[0m  [1m[32mINSERT INTO "family_member_child_parents" ("created_at", "updated_at", "parent_id", "child_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-10-28 23:16:20.377467"], ["updated_at", "2020-10-28 23:16:20.377467"], ["parent_id", 127], ["child_id", 129]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" = $1 LIMIT $2[0m  [["id", 127], ["LIMIT", 1]]
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" = $1 LIMIT $2[0m  [["id", 130], ["LIMIT", 1]]
+  [1m[36mFamilyMemberChildParent Create (0.3ms)[0m  [1m[32mINSERT INTO "family_member_child_parents" ("created_at", "updated_at", "parent_id", "child_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-10-28 23:16:20.383358"], ["updated_at", "2020-10-28 23:16:20.383358"], ["parent_id", 127], ["child_id", 130]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" = $1 LIMIT $2[0m  [["id", 127], ["LIMIT", 1]]
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" = $1 LIMIT $2[0m  [["id", 131], ["LIMIT", 1]]
+  [1m[36mFamilyMemberChildParent Create (0.2ms)[0m  [1m[32mINSERT INTO "family_member_child_parents" ("created_at", "updated_at", "parent_id", "child_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-10-28 23:16:20.388663"], ["updated_at", "2020-10-28 23:16:20.388663"], ["parent_id", 127], ["child_id", 131]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" = $1 LIMIT $2[0m  [["id", 127], ["LIMIT", 1]]
+  [1m[36mFamilyMember Load (0.2ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" = $1 LIMIT $2[0m  [["id", 132], ["LIMIT", 1]]
+  [1m[36mFamilyMemberChildParent Create (0.2ms)[0m  [1m[32mINSERT INTO "family_member_child_parents" ("created_at", "updated_at", "parent_id", "child_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-10-28 23:16:20.393833"], ["updated_at", "2020-10-28 23:16:20.393833"], ["parent_id", 127], ["child_id", 132]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamilyMember Load (0.2ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" = $1 LIMIT $2[0m  [["id", 127], ["LIMIT", 1]]
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" = $1 LIMIT $2[0m  [["id", 133], ["LIMIT", 1]]
+  [1m[36mFamilyMemberChildParent Create (0.4ms)[0m  [1m[32mINSERT INTO "family_member_child_parents" ("created_at", "updated_at", "parent_id", "child_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-10-28 23:16:20.399782"], ["updated_at", "2020-10-28 23:16:20.399782"], ["parent_id", 127], ["child_id", 133]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamilyMember Create (0.3ms)[0m  [1m[32mINSERT INTO "family_members" ("fname", "lname", "sex", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["fname", "Elva"], ["lname", "Robles"], ["sex", "F"], ["created_at", "2020-10-28 23:16:20.402296"], ["updated_at", "2020-10-28 23:16:20.402296"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamilyMember Create (0.3ms)[0m  [1m[32mINSERT INTO "family_members" ("fname", "lname", "sex", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["fname", "Norma"], ["lname", "Garcia-Lopez"], ["sex", "F"], ["created_at", "2020-10-28 23:16:20.405619"], ["updated_at", "2020-10-28 23:16:20.405619"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamilyMember Create (0.2ms)[0m  [1m[32mINSERT INTO "family_members" ("fname", "lname", "sex", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["fname", "Ana"], ["lname", "Robles"], ["sex", "F"], ["created_at", "2020-10-28 23:16:20.408635"], ["updated_at", "2020-10-28 23:16:20.408635"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamilyMember Create (0.2ms)[0m  [1m[32mINSERT INTO "family_members" ("fname", "lname", "sex", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["fname", "Gloria"], ["lname", "Corona"], ["sex", "M"], ["created_at", "2020-10-28 23:16:20.414509"], ["updated_at", "2020-10-28 23:16:20.414509"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamilyMember Create (0.2ms)[0m  [1m[32mINSERT INTO "family_members" ("fname", "lname", "sex", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["fname", "Vanessa"], ["lname", "Corona"], ["sex", "F"], ["created_at", "2020-10-28 23:16:20.418188"], ["updated_at", "2020-10-28 23:16:20.418188"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamilyMember Create (0.2ms)[0m  [1m[32mINSERT INTO "family_members" ("fname", "lname", "sex", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["fname", "Monica"], ["lname", "Robles"], ["sex", "F"], ["created_at", "2020-10-28 23:16:20.421171"], ["updated_at", "2020-10-28 23:16:20.421171"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamilyMember Create (0.3ms)[0m  [1m[32mINSERT INTO "family_members" ("fname", "lname", "sex", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["fname", "Juliana"], ["lname", "Robles"], ["sex", "F"], ["created_at", "2020-10-28 23:16:20.423938"], ["updated_at", "2020-10-28 23:16:20.423938"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamilyMember Create (0.3ms)[0m  [1m[32mINSERT INTO "family_members" ("fname", "lname", "sex", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["fname", "Isabel"], ["lname", "Robles"], ["sex", "F"], ["created_at", "2020-10-28 23:16:20.426749"], ["updated_at", "2020-10-28 23:16:20.426749"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" = $1 LIMIT $2[0m  [["id", 134], ["LIMIT", 1]]
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" = $1 LIMIT $2[0m  [["id", 135], ["LIMIT", 1]]
+  [1m[36mFamilyMemberChildParent Create (0.3ms)[0m  [1m[32mINSERT INTO "family_member_child_parents" ("created_at", "updated_at", "parent_id", "child_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-10-28 23:16:20.432640"], ["updated_at", "2020-10-28 23:16:20.432640"], ["parent_id", 134], ["child_id", 135]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" = $1 LIMIT $2[0m  [["id", 134], ["LIMIT", 1]]
+  [1m[36mFamilyMember Load (0.2ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" = $1 LIMIT $2[0m  [["id", 136], ["LIMIT", 1]]
+  [1m[36mFamilyMemberChildParent Create (0.2ms)[0m  [1m[32mINSERT INTO "family_member_child_parents" ("created_at", "updated_at", "parent_id", "child_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-10-28 23:16:20.437961"], ["updated_at", "2020-10-28 23:16:20.437961"], ["parent_id", 134], ["child_id", 136]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" = $1 LIMIT $2[0m  [["id", 134], ["LIMIT", 1]]
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" = $1 LIMIT $2[0m  [["id", 137], ["LIMIT", 1]]
+  [1m[36mFamilyMemberChildParent Create (0.2ms)[0m  [1m[32mINSERT INTO "family_member_child_parents" ("created_at", "updated_at", "parent_id", "child_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-10-28 23:16:20.442824"], ["updated_at", "2020-10-28 23:16:20.442824"], ["parent_id", 134], ["child_id", 137]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" = $1 LIMIT $2[0m  [["id", 134], ["LIMIT", 1]]
+  [1m[36mFamilyMember Load (0.3ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" = $1 LIMIT $2[0m  [["id", 138], ["LIMIT", 1]]
+  [1m[36mFamilyMemberChildParent Create (0.2ms)[0m  [1m[32mINSERT INTO "family_member_child_parents" ("created_at", "updated_at", "parent_id", "child_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-10-28 23:16:20.447810"], ["updated_at", "2020-10-28 23:16:20.447810"], ["parent_id", 134], ["child_id", 138]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamilyMember Load (0.2ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" = $1 LIMIT $2[0m  [["id", 134], ["LIMIT", 1]]
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" = $1 LIMIT $2[0m  [["id", 139], ["LIMIT", 1]]
+  [1m[36mFamilyMemberChildParent Create (0.2ms)[0m  [1m[32mINSERT INTO "family_member_child_parents" ("created_at", "updated_at", "parent_id", "child_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-10-28 23:16:20.452931"], ["updated_at", "2020-10-28 23:16:20.452931"], ["parent_id", 134], ["child_id", 139]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" = $1 LIMIT $2[0m  [["id", 134], ["LIMIT", 1]]
+  [1m[36mFamilyMember Load (0.3ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" = $1 LIMIT $2[0m  [["id", 140], ["LIMIT", 1]]
+  [1m[36mFamilyMemberChildParent Create (0.2ms)[0m  [1m[32mINSERT INTO "family_member_child_parents" ("created_at", "updated_at", "parent_id", "child_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-10-28 23:16:20.458282"], ["updated_at", "2020-10-28 23:16:20.458282"], ["parent_id", 134], ["child_id", 140]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" = $1 LIMIT $2[0m  [["id", 134], ["LIMIT", 1]]
+  [1m[36mFamilyMember Load (0.1ms)[0m  [1m[34mSELECT "family_members".* FROM "family_members" WHERE "family_members"."id" = $1 LIMIT $2[0m  [["id", 141], ["LIMIT", 1]]
+  [1m[36mFamilyMemberChildParent Create (0.3ms)[0m  [1m[32mINSERT INTO "family_member_child_parents" ("created_at", "updated_at", "parent_id", "child_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-10-28 23:16:20.463490"], ["updated_at", "2020-10-28 23:16:20.463490"], ["parent_id", 134], ["child_id", 141]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
